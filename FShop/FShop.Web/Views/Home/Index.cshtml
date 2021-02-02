@@ -1,0 +1,25 @@
+﻿@model List<FShop.Web.Models.AdvertisementViewModel>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <h1>@ViewBag.Hello</h1>
+    </div>
+    <div>
+        @foreach(var item in Model)
+        {
+            var str = item.Description + item.DisplayOrder.GetValueOrDefault(0).ToString() + item.Name + item.URL + item.Image;
+            <p>@str</p>
+        }
+    </div>
+</body>
+</html>

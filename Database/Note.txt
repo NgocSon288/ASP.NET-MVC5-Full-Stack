@@ -1,0 +1,5 @@
+Nhập hàng vào kho
+Bill nhập
+bill xuất
+
+Làm xong các chức năng thì Role
