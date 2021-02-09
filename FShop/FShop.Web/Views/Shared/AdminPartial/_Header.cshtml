@@ -175,15 +175,20 @@
             <div class="clearfix"> </div>
         </div>
         <!--notification menu end -->
-        <div class="profile_details">
+        <div class="profile_details" style="width: 50%;">
             <ul>
                 <li class="dropdown profile_details_drop">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                         <div class="profile_img">
-                            <span class="prfil-img"><img src="images/p1.png" alt=""> </span>
-                            <div class="user-name">
-                                <p>@member.DisplayName</p>
-                                <span>Administrator</span>
+                            <span class="prfil-img"><img src="images/p1.png" alt="" class="img-circle"> </span>
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <img src="@Url.Content("~/Assets/Admin/images/MyImages/" + member.Avatar)" class="img-circle" width="50" height="50" />
+                                </div>
+                                <div class="user-name col-sm-7">
+                                    <p>@member.DisplayName</p>
+                                    <span>Administrator</span>
+                                </div>
                             </div>
                             <i class="fa fa-angle-down lnr"></i>
                             <i class="fa fa-angle-up lnr"></i>

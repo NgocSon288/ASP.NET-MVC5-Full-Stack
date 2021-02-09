@@ -15,7 +15,14 @@
     Trang quản lý thành viên
 }
 
-<input placeholder="Search..." id="member-search" style="min-width: 300px;"/>
+<div class="row">
+    <div class="col-lg-6">
+        @Html.ActionLink("Thêm", "AddMember", "Member", new { @class = "btn btn-success" })
+    </div>
+    <div class="col-lg-6">
+        <input placeholder="Search..." id="member-search" style="min-width: 300px;"/>
+    </div>
+</div>
 
 <table class="table table-striped table-hover">
     <thead>

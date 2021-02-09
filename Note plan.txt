@@ -1,0 +1,7 @@
+-- Member
+	+ Thêm			=> 100
+	+ Xòa			=> 100
+	+ Sửa			=> 100
+	+ Phân trang - View	=> 100
+	+ Search View		=> 100
+	+ Hiển thị thiếu 1

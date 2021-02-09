@@ -5,6 +5,7 @@
         this.paginationItemClick();
         this.filterMember();
         this.memberDelete();
+        //this.checkInsertMember();
     },
     loadFirstPage: function () {
         $(".member-page").addClass("hidden-row");
@@ -80,6 +81,22 @@
                 }
             })
         });
+    },
+    checkInsertMember: function () {
+        $("#form-member-insert").on("submit", function () {
+            var userName = $("#txtUserName").val();
+            var passWord = $("#txtPassWord").val();
+            var confirmPassWord = $("#txtConfirmPassword").val();
+            var displayName = $("#txtDisplayName").val();
+            var email = $("#txtEmail").val();
+            var address = $("#txtAddress").val();
+
+            //if (confirmPassWord != passWord) {
+            //    $("#lblConfirmPassword").removeClass("hidden"); 
+            //}
+             
+            return true;
+        })
     }
 }
 

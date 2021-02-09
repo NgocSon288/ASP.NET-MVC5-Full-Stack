@@ -29,6 +29,7 @@ namespace FShop.Web.AutoMapperConfig
             // Member
             CreateMap<Member, MemberSession>();
             CreateMap<Member, MemberViewModel>();
+            CreateMap<MemberViewModel, Member>();
 
             // MemberNotification
 
