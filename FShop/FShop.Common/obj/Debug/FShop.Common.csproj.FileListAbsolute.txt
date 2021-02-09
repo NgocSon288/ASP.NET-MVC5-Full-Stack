@@ -1,6 +1,6 @@
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Common\bin\Debug\FShop.Common.dll
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Common\bin\Debug\FShop.Common.pdb
-C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Common\obj\Debug\FShop.Common.csprojAssemblyReference.cache
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Common\obj\Debug\FShop.Common.csproj.CoreCompileInputs.cache
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Common\obj\Debug\FShop.Common.dll
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Common\obj\Debug\FShop.Common.pdb
+C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Common\obj\Debug\FShop.Common.csprojAssemblyReference.cache

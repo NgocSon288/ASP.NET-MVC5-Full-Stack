@@ -8,7 +8,7 @@ namespace FShop.Data
     {
         public FShopDbContext() : base("FShopConnection")
         {
-            this.Configuration.LazyLoadingEnabled = false;
+            //this.Configuration.LazyLoadingEnabled = false;
         }
 
         public DbSet<Advertisement> Advertisements { set; get; }

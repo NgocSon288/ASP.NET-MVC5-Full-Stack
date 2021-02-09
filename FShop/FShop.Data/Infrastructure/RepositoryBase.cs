@@ -42,17 +42,20 @@ namespace FShop.Data.Infrastructure
         {
             dbSet.Attach(entity);
             dataContext.Entry(entity).State = EntityState.Modified;
+
         }
 
         public virtual T Delete(T entity)
         {
             return dbSet.Remove(entity);
         }
+
         public virtual T Delete(int id)
         {
             var entity = dbSet.Find(id);
             return dbSet.Remove(entity);
         }
+
         public virtual void DeleteMulti(Expression<Func<T, bool>> where)
         {
             IEnumerable<T> objects = dbSet.Where<T>(where).AsEnumerable();

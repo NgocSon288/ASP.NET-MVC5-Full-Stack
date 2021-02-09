@@ -23,7 +23,15 @@ namespace FShop.Data.Infrastructure
 
         public void Commit()
         {
-            DbContext.SaveChanges();
+            try
+            {
+                DbContext.SaveChanges();
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
         }
     }
 }

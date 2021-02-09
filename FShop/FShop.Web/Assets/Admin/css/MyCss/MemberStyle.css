@@ -1,0 +1,9 @@
+﻿.status-btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hidden-row{
+    display: none;
+}

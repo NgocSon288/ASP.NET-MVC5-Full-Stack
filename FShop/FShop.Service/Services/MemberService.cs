@@ -11,6 +11,10 @@ namespace FShop.Service.Services
 {
     public interface IMemberService
     {
+        Task<int> Login(string userName, string passWord);
+
+        Task<Member> GetByUserName(string userName);
+
         Member Insert(Member entity);
 
         void Update(Member entity);
@@ -31,13 +35,47 @@ namespace FShop.Service.Services
     public class MemberService : IMemberService
     {
         private readonly IMemberRepository _MemberRepository;
+        private readonly IMemberStatusRepository _memberStatusRepository;
         private readonly IUnitOfWork _unitOfWork;
 
-
-        public MemberService(IMemberRepository MemberRepository, IUnitOfWork unitOfWork)
+        public MemberService(IMemberRepository MemberRepository,
+            IUnitOfWork unitOfWork,
+            IMemberStatusRepository memberStatusRepository)
         {
             this._MemberRepository = MemberRepository;
             this._unitOfWork = unitOfWork;
+            this._memberStatusRepository = memberStatusRepository;
+        }
+
+        /// <summary>
+        /// 0 = Không tồn tại
+        /// -1 = Mật khẩu  sai
+        /// -2 = Tài khoản bị khóa
+        /// 1 = OK
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="passWord"></param>
+        /// <returns></returns>
+        public async Task<int> Login(string userName, string passWord)
+        {
+            var member = await _MemberRepository.GetByUserName(userName);
+
+            if(member == null)
+            {
+                return 0;
+            }
+
+            if(member.PassWord != passWord)
+            {
+                return -1;
+            }
+
+            if(member.MemberStatus.Status == 2)
+            {
+                return -2;
+            }
+
+            return 1;
         }
 
         public void Delete(Member entity)
@@ -71,13 +109,18 @@ namespace FShop.Service.Services
         }
 
         public void SaveChanges()
-        {
-            _unitOfWork.Commit();
+        { 
+            _unitOfWork.Commit(); 
         }
 
         public void Update(Member entity)
         {
             _MemberRepository.Update(entity);
+        }
+
+        public async Task<Member> GetByUserName(string userName)
+        {
+            return await _MemberRepository.GetByUserName(userName);
         }
     }
 }

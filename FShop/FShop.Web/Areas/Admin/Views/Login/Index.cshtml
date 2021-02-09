@@ -1,0 +1,97 @@
+﻿@model FShop.Web.Models.LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Shoppy an Admin Panel Category Flat Bootstrap Responsive Website Template | Login :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <link href="/Assets/Admin/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- Custom Theme files -->
+    <link href="/Assets/Admin/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!--js-->
+    <script src="/Assets/Admin/js/jquery-2.1.1.min.js"></script>
+    <!--icons-css-->
+    <link href="/Assets/Admin/css/font-awesome.css" rel="stylesheet">
+    <!--Google Fonts-->
+    <link href='//fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
+    <!--static chart-->
+</head>
+<body>
+    <div class="login-page">
+        <div class="login-main">
+            <div class="login-head">
+                <h1>FShop</h1>
+            </div>
+            <div class="login-block">
+                @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken() 
+                    @Html.ValidationSummary(false, "", new { @class="alert-danger" , @autofocus = "autofocus" },"")
+
+                    @Html.TextBoxFor(Model => Model.UserName, new { @placeholder = "Tài khoản", @value="son" })
+                    @Html.PasswordFor(Model => Model.PassWord, new { @placeholder = "Mật khẩu", @class = "lock", @value="123" })
+                    <div class="forgot-top-grids">
+                        <div class="forgot-grid">
+                            <ul>
+                                <li>
+                                    @Html.CheckBoxFor(Model => Model.IsRememberMe, new { @id = "brand1" })
+                                    <label for="brand1"><span></span>Remember me</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="forgot">
+                            <a href="#">Quên mật khẩu?</a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <input type="submit" name="ĐĂNG NHẬP" value="Login">
+                    <h3>Not a member?<a href="signup.html">Đăng ký</a></h3>
+                    <h2>or login with</h2>
+                    <div class="login-icons">
+                        <ul>
+                            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <!--inner block end here-->
+    <!--copy rights start here-->
+    <div class="copyrights">
+        <p>© 2016 Shoppy. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+    </div>
+    <!--COPY rights end here-->
+    @*my style*@
+
+    <style>
+        input,
+        select,
+        textarea {
+            max-width: initial;
+        }
+    </style>
+
+    <!--scrolling js-->
+    <script src="/Assets/Admin/js/jquery.nicescroll.js"></script>
+    <script src="/Assets/Admin/js/scripts.js"></script>
+    <!--//scrolling js-->
+    <script src="/Assets/Admin/js/bootstrap.js"></script>
+    <!-- mother grid end here-->
+</body>
+</html>
+
+
+
+

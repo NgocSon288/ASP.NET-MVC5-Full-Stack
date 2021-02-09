@@ -1,4 +1,4 @@
-﻿@model List<FShop.Web.Models.AdvertisementViewModel>
+﻿
 @{
     Layout = null;
 }
@@ -12,14 +12,7 @@
 </head>
 <body>
     <div> 
-        <h1>@ViewBag.Hello</h1>
-    </div>
-    <div>
-        @foreach(var item in Model)
-        {
-            var str = item.Description + item.DisplayOrder.GetValueOrDefault(0).ToString() + item.Name + item.URL + item.Image;
-            <p>@str</p>
-        }
+        this is home
     </div>
 </body>
 </html>

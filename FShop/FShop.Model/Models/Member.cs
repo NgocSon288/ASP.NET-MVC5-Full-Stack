@@ -14,12 +14,12 @@ namespace FShop.Model.Models
 
         [Required]
         [DisplayName("Tài khoản")]
-        [StringLength(100, MinimumLength = 4, ErrorMessage = "{0} phải từ {2} đến {1} ký tự")]
+        [StringLength(100, MinimumLength = 1, ErrorMessage = "{0} phải từ {2} đến {1} ký tự")]
         public string UserName { get; set; }
 
         [Required]
         [DisplayName("Mật khẩu")]
-        [StringLength(100, MinimumLength = 4, ErrorMessage = "{0} phải từ {2} đến {1} ký tự")]
+        [StringLength(100, MinimumLength = 1, ErrorMessage = "{0} phải từ {2} đến {1} ký tự")]
         public string PassWord { get; set; }
 
         [Required]
