@@ -66,7 +66,7 @@ namespace FShop.Web.Areas.Admin.Controllers
                     }
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return View(model);
             }

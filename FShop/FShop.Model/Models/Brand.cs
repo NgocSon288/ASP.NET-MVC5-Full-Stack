@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using FShop.Model.Abstract;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FShop.Model.Models
 {
     [Table("Brands")]
-    public class Brand
+    public class Brand : Auditable
     {
         [Key]
         public int ID { get; set; }
@@ -13,7 +14,7 @@ namespace FShop.Model.Models
         [Required]
         public string Name { get; set; }
 
-        public string Description { get; set; }
+        public string Description { get; set; } 
 
         [Required]
         public string Logo { get; set; }

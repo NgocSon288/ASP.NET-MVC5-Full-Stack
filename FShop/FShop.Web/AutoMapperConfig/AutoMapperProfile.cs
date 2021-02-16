@@ -18,18 +18,23 @@ namespace FShop.Web.AutoMapperConfig
 
             // Brand
             CreateMap<Brand, BrandViewModel>();
+            CreateMap<BrandViewModel, Brand>();
 
             // CategoryNotify
             CreateMap<CategoryNotification, CategoryNotificationViewModel>();
+            CreateMap<CategoryNotificationViewModel, CategoryNotification>();
 
             // Comment
             CreateMap<Comment, CommentViewModel>();
+            CreateMap<CommentViewModel, Comment>();
 
             // ImportBill
             CreateMap<ImportBill, ImportBillViewModel>();
+            CreateMap<ImportBillViewModel, ImportBill>();
 
             // ImportBillDetail
             CreateMap<ImportBillDetail, ImportBillDetailViewModel>();
+            CreateMap<ImportBillDetailViewModel, ImportBillDetail>();
 
             // Member
             CreateMap<Member, MemberSession>();
@@ -42,27 +47,35 @@ namespace FShop.Web.AutoMapperConfig
 
             // MemberNotification
             CreateMap<MemberNotification, MemberNotificationViewModel>();
+            CreateMap<MemberNotificationViewModel, MemberNotification>();
 
             // MemberStatus
             CreateMap<MemberStatus, MemberStatusViewModel>();
+            CreateMap<MemberStatusViewModel, MemberStatus>();
 
             // Notification
             CreateMap<Notification, NotificationViewModel>();
+            CreateMap<NotificationViewModel, Notification>();
 
             // Order
             CreateMap<Order, OrderViewModel>();
+            CreateMap<OrderViewModel, Order>();
 
             // OrderDetail
             CreateMap<OrderDetail, OrderDetailViewModel>();
+            CreateMap<OrderDetailViewModel, OrderDetail>();
 
             // OrderStatus
             CreateMap<OrderStatus, OrderStatusViewModel>();
+            CreateMap<OrderStatusViewModel, OrderStatus>();
 
             // PaymentMethod
             CreateMap<PaymentMethod, PaymentMethodViewModel>();
+            CreateMap<PaymentMethodViewModel, PaymentMethod>();
 
             // Product
             CreateMap<Product, ProductViewModel>();
+            CreateMap<ProductViewModel, Product>();
 
             // ProductCategory
             CreateMap<ProductCategory, ProductCategoryViewModel>();
@@ -70,9 +83,11 @@ namespace FShop.Web.AutoMapperConfig
 
             // Slide
             CreateMap<Slide, SlideViewModel>();
+            CreateMap<SlideViewModel, Slide>();
 
             // Supplier
             CreateMap<Supplier, SupplierViewModel>();
+            CreateMap<SupplierViewModel, Supplier>();
 
         }
     }

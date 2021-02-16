@@ -6,7 +6,6 @@ C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.T
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Test\bin\Debug\FShop.Test.pdb
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Test\bin\Debug\Castle.Core.dll
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Test\bin\Debug\EntityFramework.dll
-C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Test\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Test\bin\Debug\FShop.Common.dll
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Test\bin\Debug\FShop.Data.dll
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Test\bin\Debug\FShop.Model.dll
@@ -35,7 +34,6 @@ C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.T
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Test\bin\Debug\FShop.Web.dll.config
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Test\bin\Debug\Castle.Core.xml
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Test\bin\Debug\EntityFramework.xml
-C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Test\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Test\bin\Debug\Moq.xml
@@ -78,3 +76,6 @@ C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.T
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Test\bin\Debug\System.Memory.xml
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Test\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Test\bin\Debug\System.Buffers.xml
+C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Test\bin\Debug\FShop.Common.dll.config
+C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Test\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Test\bin\Debug\EntityFramework.SqlServer.xml

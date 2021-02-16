@@ -2,7 +2,6 @@ C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.S
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Service\bin\Debug\FShop.Service.dll
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Service\bin\Debug\FShop.Service.pdb
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Service\bin\Debug\EntityFramework.dll
-C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Service\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Service\bin\Debug\FShop.Common.dll
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Service\bin\Debug\FShop.Data.dll
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Service\bin\Debug\FShop.Model.dll
@@ -12,9 +11,11 @@ C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.S
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Service\bin\Debug\FShop.Model.pdb
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Service\bin\Debug\FShop.Model.dll.config
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Service\bin\Debug\EntityFramework.xml
-C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Service\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Service\obj\Debug\FShop.Service.csprojAssemblyReference.cache
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Service\obj\Debug\FShop.Service.csproj.CoreCompileInputs.cache
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Service\obj\Debug\FShop.Service.csproj.CopyComplete
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Service\obj\Debug\FShop.Service.dll
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Service\obj\Debug\FShop.Service.pdb
+C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Service\bin\Debug\FShop.Common.dll.config
+C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Service\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Service\bin\Debug\EntityFramework.SqlServer.xml

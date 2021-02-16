@@ -17,3 +17,6 @@ C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.D
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Data\obj\Debug\FShop.Data.pdb
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Data\obj\Debug\FShop.Data.Migrations.Initial_DB.resources
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Data\obj\Debug\FShop.Data.csproj.GenerateResource.cache
+C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Data\bin\Debug\FShop.Common.dll.config
+C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Data\obj\Debug\FShop.Data.Migrations.Update_Brand_Entity.resources
+C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Data\obj\Debug\FShop.Data.Migrations.Update_Supplier_entity.resources
