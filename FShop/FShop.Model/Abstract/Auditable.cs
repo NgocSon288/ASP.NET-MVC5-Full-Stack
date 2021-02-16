@@ -16,6 +16,6 @@ namespace FShop.Model.Abstract
 
         public string MetaKeyword { get; set; }
 
-        public string MetaDescription { get; set; } 
+        public string MetaDescription { get; set; }
     }
 }

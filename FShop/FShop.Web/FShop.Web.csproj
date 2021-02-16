@@ -174,6 +174,7 @@
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\MemberController.cs" />
     <Compile Include="Areas\Admin\Controllers\MemberStatusController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductCategoryController.cs" />
     <Compile Include="AutoMapperConfig\AutoMapperProfile.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -181,10 +182,25 @@
     </Compile>
     <Compile Include="Infrastructure\Core\ControllerBase.cs" />
     <Compile Include="Models\AdvertisementViewModel.cs" />
+    <Compile Include="Models\BrandViewModel.cs" />
+    <Compile Include="Models\CategoryNotificationViewModel.cs" />
+    <Compile Include="Models\CommentViewModel.cs" />
+    <Compile Include="Models\ImportBillDetailViewModel.cs" />
+    <Compile Include="Models\ImportBillViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
+    <Compile Include="Models\MemberNotificationViewModel.cs" />
     <Compile Include="Models\MemberStatusViewModel.cs" />
     <Compile Include="Models\MemberUpdateInputViewModel.cs" />
     <Compile Include="Models\MemberViewModel.cs" />
+    <Compile Include="Models\NotificationViewModel.cs" />
+    <Compile Include="Models\OrderDetailViewModel.cs" />
+    <Compile Include="Models\OrderStatusViewModel.cs" />
+    <Compile Include="Models\OrderViewModel.cs" />
+    <Compile Include="Models\PaymentMethodViewModel.cs" />
+    <Compile Include="Models\ProductCategoryViewModel.cs" />
+    <Compile Include="Models\ProductViewModel.cs" />
+    <Compile Include="Models\SlideViewModel.cs" />
+    <Compile Include="Models\SupplierViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -208,6 +224,12 @@
     <Content Include="Assets\Admin\images\icon.png" />
     <Content Include="Assets\Admin\images\login.jpg" />
     <Content Include="Assets\Admin\images\mess.png" />
+    <Content Include="Assets\Admin\images\MyImages\Member\admin.jpg" />
+    <Content Include="Assets\Admin\images\MyImages\Member\quynh.png" />
+    <Content Include="Assets\Admin\images\MyImages\ProductCategory\cellphone.jpg" />
+    <Content Include="Assets\Admin\images\MyImages\ProductCategory\laptop.jpg" />
+    <Content Include="Assets\Admin\images\MyImages\ProductCategory\smartwatch.jpg" />
+    <Content Include="Assets\Admin\images\MyImages\ProductCategory\tablet.jpg" />
     <Content Include="Assets\Admin\images\next.png" />
     <Content Include="Assets\Admin\images\p1.png" />
     <Content Include="Assets\Admin\images\p2.png" />
@@ -246,6 +268,8 @@
     <Content Include="Assets\Admin\js\MyScript\LoadImageScript.js" />
     <Content Include="Assets\Admin\js\MyScript\MemberScript.js" />
     <Content Include="Assets\Admin\js\MyScript\MemberStatusScript1.js" />
+    <Content Include="Assets\Admin\js\MyScript\ProductCategoryScript.js" />
+    <Content Include="Assets\Admin\js\MyScript\ProductCategoryScript1.js" />
     <Content Include="Assets\Admin\js\nivo-lightbox.min.js" />
     <Content Include="Assets\Admin\js\scripts.js" />
     <Content Include="Assets\Admin\js\skycons.js" />
@@ -275,6 +299,9 @@
     <Content Include="Areas\Admin\Views\Member\AddMember.cshtml" />
     <Content Include="Areas\Admin\Views\Member\MemberUpdate.cshtml" />
     <Content Include="Areas\Admin\Views\MemberStatus\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductCategory\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductCategory\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductCategory\Update.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -306,7 +333,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
-    <Folder Include="Assets\Admin\images\MyImages\" />
     <Folder Include="Assets\Client\" />
     <Folder Include="Infrastructure\Extensions\" />
   </ItemGroup>

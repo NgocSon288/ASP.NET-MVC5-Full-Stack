@@ -1,0 +1,55 @@
+﻿@model List<FShop.Web.Models.ProductCategoryViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section css{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+}
+
+@section header{
+    Loại sản phẩm
+}
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <td>
+                <a class="btn btn-success btn-plus" href="@Url.Action("Add", "ProductCategory")">
+                    <i class="fa fa-plus"></i>
+                    Thêm loại sản phẩm
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <th>Tên thể hiện</th>
+            <th>Định danh</th>
+            <th>Mô tả</th>
+            <th>Icon</th>
+            <th>Modify</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Alias</td>
+                <td>@item.Description</td>
+                <td>
+                    <img src="~/Assets/Admin/images/MyImages/ProductCategory/@item.Icon" width="50" height="50" />
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-update" href="@Url.Action("Update", "ProductCategory", new { @id = item.ID})">Cập nhật</a>
+                    <button class="btn btn-danger btn-delete" data-id="@item.ID">Xóa</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section script{ 
+    <script src="~/Assets/Admin/js/MyScript/ProductCategoryScript1.js"></script>
+}

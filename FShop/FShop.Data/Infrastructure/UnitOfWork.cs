@@ -27,7 +27,7 @@ namespace FShop.Data.Infrastructure
             {
                 DbContext.SaveChanges();
             }
-            catch (Exception e)
+            catch (Exception)
             {
 
                 throw;

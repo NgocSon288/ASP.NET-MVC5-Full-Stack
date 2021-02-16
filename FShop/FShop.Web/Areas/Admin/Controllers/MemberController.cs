@@ -43,7 +43,7 @@ namespace FShop.Web.Areas.Admin.Controllers
 
                 return Content("1");
             }
-            catch (System.Exception e)
+            catch (System.Exception)
             {
                 return Content("0");
             }
@@ -59,7 +59,7 @@ namespace FShop.Web.Areas.Admin.Controllers
 
                 return Content("1");
             }
-            catch (System.Exception e)
+            catch (System.Exception)
             {
                 return Content("0");
             }
@@ -122,7 +122,7 @@ namespace FShop.Web.Areas.Admin.Controllers
                         model.Avatar = fileName + extension;
 
                         // Lưu hình ảnh vào thư mục
-                        model.ImageUpload.SaveAs(Path.Combine(Server.MapPath("~/Assets/Admin/images/MyImages"), model.Avatar));
+                        model.ImageUpload.SaveAs(Path.Combine(Server.MapPath("~/Assets/Admin/images/MyImages/Member/"), model.Avatar));
 
                         model.IsAnotherIdentity = "1";
                         model.MemberStatusID = 1;
@@ -139,8 +139,9 @@ namespace FShop.Web.Areas.Admin.Controllers
                         _memberService.SaveChanges();
                     }
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
+
                 }
             }
 
@@ -200,7 +201,7 @@ namespace FShop.Web.Areas.Admin.Controllers
                     model.Avatar = fileName + extension;
 
                     // Lưu hình ảnh vào thư mục
-                    model.ImageUpload.SaveAs(Path.Combine(Server.MapPath("~/Assets/Admin/images/MyImages"), model.Avatar));
+                    model.ImageUpload.SaveAs(Path.Combine(Server.MapPath("~/Assets/Admin/images/MyImages/Member/"), model.Avatar));
                 }
 
                 if (!check)
@@ -229,7 +230,7 @@ namespace FShop.Web.Areas.Admin.Controllers
 
                         SetMemberSession(member);
                     }
-                    catch (Exception e)
+                    catch (Exception)
                     {
                         
                     }
