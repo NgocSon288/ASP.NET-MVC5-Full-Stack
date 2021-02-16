@@ -173,6 +173,7 @@
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\MemberController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MemberStatusController.cs" />
     <Compile Include="AutoMapperConfig\AutoMapperProfile.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -182,6 +183,7 @@
     <Compile Include="Models\AdvertisementViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\MemberStatusViewModel.cs" />
+    <Compile Include="Models\MemberUpdateInputViewModel.cs" />
     <Compile Include="Models\MemberViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -243,6 +245,7 @@
     <Content Include="Assets\Admin\js\modernizr.min.js" />
     <Content Include="Assets\Admin\js\MyScript\LoadImageScript.js" />
     <Content Include="Assets\Admin\js\MyScript\MemberScript.js" />
+    <Content Include="Assets\Admin\js\MyScript\MemberStatusScript1.js" />
     <Content Include="Assets\Admin\js\nivo-lightbox.min.js" />
     <Content Include="Assets\Admin\js\scripts.js" />
     <Content Include="Assets\Admin\js\skycons.js" />
@@ -270,6 +273,8 @@
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Member\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Member\AddMember.cshtml" />
+    <Content Include="Areas\Admin\Views\Member\MemberUpdate.cshtml" />
+    <Content Include="Areas\Admin\Views\MemberStatus\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

@@ -26,7 +26,7 @@ namespace FShop.Web.Areas.Admin.Controllers
 
         public void SetMemberSession(Member member)
         {
-            Session.Add(Constants.MEMBER_SESSION, AutoMapper.Mapper.Map<MemberSession>(member));
+            Session[Constants.MEMBER_SESSION] = AutoMapper.Mapper.Map<MemberSession>(member);
         }
 
         public MemberSession GetMemberSession()

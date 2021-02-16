@@ -12,7 +12,7 @@
 }
 
 @section header{
-    Trang quản lý thành viên
+    Quản lý thành viên
 }
 
 <div class="row">
@@ -52,7 +52,7 @@
                     break;
             }
 
-            <tr class="@Url.Content("hidden-row member-page member-page")@((i + 2) / pageSize )" data-test="a">
+            <tr class="@Url.Content("hidden-row member-page member-page")@((i + pageSize - 1) / pageSize )" data-test="a">
                 <td>@(i++)</td>
                 <td>@item.UserName</td>
                 <td>@item.DisplayName</td>
@@ -62,6 +62,7 @@
                     <a class="status-btn @color" data-id="@item.ID" data-status="@item.MemberStatus.Status">@item.MemberStatus.Description</a>
                 </td>
                 <td data-id="@item.ID">
+                    @Html.ActionLink("Sửa", "MemberUpdate", "Member", new { @memberID = item.ID}, new { @class="btn btn-primary"})
                     <button class="btn btn-danger member-delete">Xóa</button>
                 </td>
             </tr>
@@ -71,7 +72,7 @@
 
 <nav aria-label="Page navigation example">
     <ul class="pagination">
-        @for (i = 1; i <= (count + 1) / pageSize; i++)
+        @for (i = 1; i <= (count + pageSize - 1) / pageSize; i++)
         {
             if (i == 1)
             {

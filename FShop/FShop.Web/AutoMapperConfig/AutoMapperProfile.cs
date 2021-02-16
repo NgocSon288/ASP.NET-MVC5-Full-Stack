@@ -30,10 +30,15 @@ namespace FShop.Web.AutoMapperConfig
             CreateMap<Member, MemberSession>();
             CreateMap<Member, MemberViewModel>();
             CreateMap<MemberViewModel, Member>();
+            CreateMap<Member, MemberUpdateInputViewModel>();
+            CreateMap<MemberUpdateInputViewModel, Member>()
+                .ForMember(model => model.PassWord,
+                    map => map.MapFrom(p => p.NewPassWord));
 
             // MemberNotification
 
             // MemberStatus
+            CreateMap<MemberStatus, MemberStatusViewModel>();
 
             // Notification
 

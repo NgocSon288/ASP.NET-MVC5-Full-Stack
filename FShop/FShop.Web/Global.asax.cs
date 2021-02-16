@@ -1,5 +1,7 @@
-﻿using System;
+﻿using FShop.Data;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -15,7 +17,9 @@ namespace FShop.Web
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            BundleConfig.RegisterBundles(BundleTable.Bundles); 
+            
+            Database.SetInitializer<FShopDbContext>(null);
 
             // AutoMapper
             AutoMapper.Mapper.Initialize(cfg => cfg.AddProfile<AutoMapperConfig.AutoMapperProfile>());

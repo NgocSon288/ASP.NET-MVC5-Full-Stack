@@ -8,7 +8,7 @@ namespace FShop.Model.Models
     public class MemberStatus
     {
         [Key]
-        public int ID { get; set; }
+        public int ID { get; set; } 
 
         [Required]
         public int Status { get; set; }
