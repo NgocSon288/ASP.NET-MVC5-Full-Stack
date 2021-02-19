@@ -172,10 +172,12 @@
     <Compile Include="Areas\Admin\Controllers\BaseAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\BrandController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ImportBillController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\MemberController.cs" />
     <Compile Include="Areas\Admin\Controllers\MemberStatusController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductCategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\SupplierController.cs" />
     <Compile Include="AutoMapperConfig\AutoMapperProfile.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -214,6 +216,9 @@
     <Content Include="Assets\Admin\css\hover.css" />
     <Content Include="Assets\Admin\css\magnific-popup.css" />
     <Content Include="Assets\Admin\css\MyCss\MemberStyle.css" />
+    <Content Include="Assets\Admin\css\MyCss\ProductStyle1.css" />
+    <Content Include="Assets\Admin\css\MyCss\ProductStyle2.css" />
+    <Content Include="Assets\Admin\css\MyCss\ProductStyle3.css" />
     <Content Include="Assets\Admin\css\style.css" />
     <Content Include="Assets\Admin\fonts\fontawesome-webfont.svg" />
     <Content Include="Assets\Admin\fonts\glyphicons-halflings-regular.svg" />
@@ -276,7 +281,7 @@
     <Content Include="Assets\Admin\js\MyScript\MemberScript.js" />
     <Content Include="Assets\Admin\js\MyScript\MemberStatusScript1.js" />
     <Content Include="Assets\Admin\js\MyScript\ProductCategoryScript.js" />
-    <Content Include="Assets\Admin\js\MyScript\SupplierScript.js" />
+    <Content Include="Assets\Admin\js\MyScript\ProductScript4.js" />
     <Content Include="Assets\Admin\js\nivo-lightbox.min.js" />
     <Content Include="Assets\Admin\js\scripts.js" />
     <Content Include="Assets\Admin\js\skycons.js" />
@@ -315,6 +320,11 @@
     <Content Include="Areas\Admin\Views\Supplier\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Supplier\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Supplier\Update.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Update.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\ProductListPartial.cshtml" />
+    <Content Include="Areas\Admin\Views\ImportBill\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -346,6 +356,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Assets\Admin\images\MyImages\Product\" />
     <Folder Include="Assets\Client\" />
     <Folder Include="Infrastructure\Extensions\" />
   </ItemGroup>

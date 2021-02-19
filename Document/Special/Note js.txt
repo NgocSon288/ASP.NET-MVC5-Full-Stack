@@ -1,0 +1,3 @@
+ 
+// trường hợp đã load, thì cần dùng on hoặc delegate
+$("body").on("click", ".btn-pagin", function () { })

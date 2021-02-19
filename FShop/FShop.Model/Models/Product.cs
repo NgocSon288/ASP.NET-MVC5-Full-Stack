@@ -26,8 +26,7 @@ namespace FShop.Model.Models
         public string Image { get; set; }
 
         [Required]
-        [DisplayName("Hình ảnh khác")]
-        [Column(TypeName = "xml")]
+        [DisplayName("Hình ảnh khác")] 
         public string MoreImage { get; set; }
 
         [Required]
@@ -69,8 +68,6 @@ namespace FShop.Model.Models
         public Supplier Supplier { get; set; }
 
         [ForeignKey("CategoryID")]
-        public ProductCategory ProductCategory { get; set; }
-
-        public virtual IEnumerable<Comment> Comments { get; set; }
+        public ProductCategory ProductCategory { get; set; } 
     }
 }

@@ -1,16 +1,19 @@
 ﻿using FShop.Data.Infrastructure;
 using FShop.Data.Repositories;
 using FShop.Model.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FShop.Service.Services
 {
     public interface IProductService
     {
+        IEnumerable<Product> GetProductPage(string key, int page, int pageSize, out int pageMax, int installment, int brandID, int supplierID, int categoryID);
+
+        bool IsAliasOk(string alias, int id = 0);
+
+        bool IsDisplayNameOk(string name, int id = 0);
+
         Product Insert(Product entity);
 
         void Update(Product entity);
@@ -26,18 +29,39 @@ namespace FShop.Service.Services
         Product GetByID(int id);
 
         void SaveChanges();
-
     }
+
     public class ProductService : IProductService
     {
         private readonly IProductRepository _ProductRepository;
         private readonly IUnitOfWork _unitOfWork;
 
-
         public ProductService(IProductRepository ProductRepository, IUnitOfWork unitOfWork)
         {
             this._ProductRepository = ProductRepository;
             this._unitOfWork = unitOfWork;
+        }
+
+        public bool IsAliasOk(string alias, int id = 0)
+        {
+            if (alias == null)
+                return false;
+
+            var products = _ProductRepository.GetAll().ToList();
+            var product = products.FirstOrDefault(p => p.Alias.ToLower() == alias.ToLower() && p.ID != id);
+
+            return product == null || product.ID == id;
+        }
+
+        public bool IsDisplayNameOk(string name, int id = 0)
+        {
+            if (name == null)
+                return false;
+
+            var products = _ProductRepository.GetAll().ToList();
+            var product = products.FirstOrDefault(p => p.Name.ToLower() == name.ToLower() && p.ID != id);
+
+            return product == null || product.ID == id;
         }
 
         public void Delete(Product entity)
@@ -79,5 +103,52 @@ namespace FShop.Service.Services
         {
             _ProductRepository.Update(entity);
         }
+
+        public IEnumerable<Product> GetProductPage(string key, int page, int pageSize, out int pageMax, int installment, int brandID, int supplierID, int categoryID)
+        {
+            var products = _ProductRepository.GetAll();
+
+            if(key != null && key != "")
+            {
+                products = products.Where(p => p.Name.ToLower().Contains(key.ToLower()) || p.Alias.ToLower().Contains(key.ToLower()));
+            }
+
+            if(installment == -1)
+            {
+                products = products.Where(p => !p.IsInstallment);
+            }
+            else if(installment == 1)
+            {
+                products = products.Where(p => p.IsInstallment);
+            }
+
+            if(brandID != 0)
+            {
+                products = products.Where(p => p.BrandID == brandID);
+            }
+
+            if (supplierID != 0)
+            {
+                products = products.Where(p => p.SupplierID == supplierID);
+            }
+
+            if (categoryID != 0)
+            {
+                products = products.Where(p => p.CategoryID == categoryID);
+            }
+
+            pageMax = products.Count();
+
+            try
+            {
+                products = products.Skip((page - 1) * pageSize);
+
+                return products.Take(pageSize);
+            }
+            catch (System.Exception)
+            {
+                return products;
+            }
+        } 
     }
 }

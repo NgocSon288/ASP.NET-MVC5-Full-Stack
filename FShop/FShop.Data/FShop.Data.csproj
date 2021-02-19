@@ -75,6 +75,10 @@
     <Compile Include="Migrations\202102161444512_Update_Supplier_entity.designer.cs">
       <DependentUpon>202102161444512_Update_Supplier_entity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102180355380_update_product_entity.cs" />
+    <Compile Include="Migrations\202102180355380_update_product_entity.designer.cs">
+      <DependentUpon>202102180355380_update_product_entity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AdvertisementRepository.cs" />
@@ -119,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102161444512_Update_Supplier_entity.resx">
       <DependentUpon>202102161444512_Update_Supplier_entity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102180355380_update_product_entity.resx">
+      <DependentUpon>202102180355380_update_product_entity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
