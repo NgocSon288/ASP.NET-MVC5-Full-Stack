@@ -11,7 +11,13 @@ namespace FShop.Service.Services
 {
     public interface IImportBillDetailService
     {
+        void DeleteByImportBillID(int importBillID);
+
+        IEnumerable<ImportBillDetail> GetByImportBillID(int importBillID);
+
         ImportBillDetail Insert(ImportBillDetail entity);
+
+        void Insert(IEnumerable<ImportBillDetail> importBillDetails);
 
         void Update(ImportBillDetail entity);
 
@@ -50,6 +56,11 @@ namespace FShop.Service.Services
             _ImportBillDetailRepository.Delete(id);
         }
 
+        public void DeleteByImportBillID(int importBillID)
+        {
+            _ImportBillDetailRepository.DeleteMulti(ibd => ibd.ImportBillID == importBillID);
+        }
+
         public IEnumerable<ImportBillDetail> GetAll()
         {
             return _ImportBillDetailRepository.GetAll();
@@ -65,9 +76,22 @@ namespace FShop.Service.Services
             return _ImportBillDetailRepository.GetSingleById(id);
         }
 
+        public IEnumerable<ImportBillDetail> GetByImportBillID(int importBillID)
+        {
+            return _ImportBillDetailRepository.GetMulti((ibd => ibd.ImportBillID == importBillID));
+        }
+
         public ImportBillDetail Insert(ImportBillDetail entity)
         {
             return _ImportBillDetailRepository.Add(entity);
+        }
+
+        public void Insert(IEnumerable<ImportBillDetail> importBillDetails)
+        {
+            foreach (var item in importBillDetails)
+            {
+                _ImportBillDetailRepository.Add(item);
+            }
         }
 
         public void SaveChanges()

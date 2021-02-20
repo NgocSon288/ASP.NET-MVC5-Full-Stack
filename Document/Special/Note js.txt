@@ -1,3 +1,8 @@
  
 // trường hợp đã load, thì cần dùng on hoặc delegate
 $("body").on("click", ".btn-pagin", function () { })
+
+// chọn ra option được chọn trong select
+var opt = $("#elementId :selected");
+// với this là select
+var opt = $(this).children(":selected");

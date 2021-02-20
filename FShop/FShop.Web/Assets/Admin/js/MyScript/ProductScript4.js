@@ -56,7 +56,7 @@
                 data: { id: id, status: !status },
                 type: "POST",
                 success: function (response) {
-                    if (response == "1") {
+                    if (response == "1") {  
                         if (status) {
                             tr.parents("tr").addClass("tr-delete");
                         } else {

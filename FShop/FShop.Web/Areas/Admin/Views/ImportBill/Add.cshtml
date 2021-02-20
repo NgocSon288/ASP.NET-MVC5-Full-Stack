@@ -1,0 +1,104 @@
+﻿@model FShop.Web.Models.ImportBillViewModel
+
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+    var products = ViewBag.Products as List<FShop.Web.Models.ProductViewModel>;
+    var modelDetail = ViewBag.modelDetail as List<FShop.Web.Models.ImportBillDetailViewModel>;
+
+
+}
+
+@section css{
+    <link href="~/Assets/Admin/css/MyCss/ImportBillStyle1.css" rel="stylesheet" />
+}
+
+@section header{
+    Nhập hàng
+}
+
+@using (Html.BeginForm("Add", "ImportBill", FormMethod.Post, new { @id="form-submit"}))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Giá</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr class="tr-append hidden">
+                    <td>
+                        <select class="form-control productid">
+                            @foreach (var item in products)
+                            {
+                                <option value="@item.ID">@item.Name</option>
+                            }
+                        </select>
+                    </td>
+                    <td>
+                        <input value="1" class="form-control count" />
+                    </td>
+                    <td>
+                        <input value="1" class="form-control importprice" />
+                    </td>
+                    <td>
+                        <span class="btn btn-danger btn-delete-row"><i class="fa fa-minus"></i></span>
+                    </td>
+                </tr>
+                @if (modelDetail != null)
+                {
+                    for (var i = 0; i < modelDetail.Count; i++)
+                    {
+                        <tr class="tr-appended">
+                            <td>
+                                <select class="form-control productid" name="[@i].ProductID">
+                                    @foreach (var item in products)
+                                    {
+                                        if (modelDetail[i].ProductID == item.ID)
+                                        {
+                                            <option value="@item.ID" selected>@item.Name</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@item.ID">@item.Name</option>
+                                        }
+                                    }
+                                </select>
+                            </td>
+                            <td>
+                                <input value="@modelDetail[i].Count" class="form-control count" name="[@i].Count" />
+                            </td>
+                            <td>
+                                <input value="@modelDetail[i].ImportPrice" class="form-control importprice" name="[@i].ImportPrice" />
+                            </td>
+                            <td>
+                                <span class="btn btn-danger btn-delete-row"><i class="fa fa-minus"></i></span>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+        <span class="btn btn-primary btn-add-row"><i class="fa fa-plus"></i></span>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+@section script{
+    <script src="~/Assets/Admin/js/MyScript/ImportBillScript.js"></script>
+}

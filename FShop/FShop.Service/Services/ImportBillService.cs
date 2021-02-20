@@ -11,6 +11,8 @@ namespace FShop.Service.Services
 {
     public interface IImportBillService
     {
+        IEnumerable<ImportBill> GetImportBillPage(int page, int pageSize, out int pageMax, DateTime? startDate, DateTime? endDate);
+
         ImportBill Insert(ImportBill entity);
 
         void Update(ImportBill entity);
@@ -31,12 +33,14 @@ namespace FShop.Service.Services
     public class ImportBillService : IImportBillService
     {
         private readonly IImportBillRepository _ImportBillRepository;
+        private readonly IImportBillDetailRepository _importBillDetailRepository;
         private readonly IUnitOfWork _unitOfWork;
 
 
-        public ImportBillService(IImportBillRepository ImportBillRepository, IUnitOfWork unitOfWork)
+        public ImportBillService(IImportBillRepository ImportBillRepository, IImportBillDetailRepository importBillDetailRepository, IUnitOfWork unitOfWork)
         {
             this._ImportBillRepository = ImportBillRepository;
+            this._importBillDetailRepository = importBillDetailRepository;
             this._unitOfWork = unitOfWork;
         }
 
@@ -60,9 +64,42 @@ namespace FShop.Service.Services
             return _ImportBillRepository.GetMultiPaging(ms => true, out totalRow, page, pageSize);
         }
 
+        //error
         public ImportBill GetByID(int id)
         {
-            return _ImportBillRepository.GetSingleById(id);
+            var import = _ImportBillRepository.GetSingleById(id);
+            import.ImportBillDetails = _importBillDetailRepository.GetMulti(ibd => ibd.ImportBillID == id).ToList();
+
+            return import;
+        }
+
+
+        public IEnumerable<ImportBill> GetImportBillPage(int page, int pageSize, out int pageMax, DateTime? startDate, DateTime? endDate)
+        {
+            var importBills = _ImportBillRepository.GetAll();
+
+            if (startDate != null)
+            {
+                importBills = importBills.Where(ib => ib.CreatedDate >= startDate);
+            }
+
+            if (endDate != null)
+            {
+                importBills = importBills.Where(ib => ib.CreatedDate <= endDate);
+            }
+
+            pageMax = importBills.Count();
+
+            try
+            {
+                importBills = importBills.Skip((page - 1) * pageSize);
+
+                return importBills.Take(pageSize);
+            }
+            catch (System.Exception)
+            {
+                return importBills;
+            }
         }
 
         public ImportBill Insert(ImportBill entity)

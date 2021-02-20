@@ -11,10 +11,20 @@ namespace FShop.Web.Models
         [Key]
         public int ID { get; set; }
 
-        //[Required]
-        //public int SupplierID { get; set; }
+        public virtual IEnumerable<ImportBillDetailViewModel> ImportBillDetails { get; set; } 
 
-        //[ForeignKey("SupplierID")]
-        public virtual SupplierViewModel Supplier { get; set; }
+        public DateTime? CreatedDate { get; set; }
+
+        public string CreatedBy { get; set; }
+
+        public DateTime? UpdatedDate { get; set; }
+
+        public string UpdateBy { get; set; }
+
+        public bool? Status { get; set; }
+
+        public string MetaKeyword { get; set; }
+
+        public string MetaDescription { get; set; }
     }
 }

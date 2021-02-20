@@ -38,5 +38,6 @@ namespace FShop.Web.Areas.Admin.Controllers
         {
             Session[Constants.MEMBER_SESSION] = null;
         }
+
     }
 }

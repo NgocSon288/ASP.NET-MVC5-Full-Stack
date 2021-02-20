@@ -173,6 +173,7 @@
     <Compile Include="Areas\Admin\Controllers\BrandController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ImportBillController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ImportBillDetailController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\MemberController.cs" />
     <Compile Include="Areas\Admin\Controllers\MemberStatusController.cs" />
@@ -215,9 +216,9 @@
     <Content Include="Assets\Admin\css\geochart.css" />
     <Content Include="Assets\Admin\css\hover.css" />
     <Content Include="Assets\Admin\css\magnific-popup.css" />
+    <Content Include="Assets\Admin\css\MyCss\ImportBillDetailStyle.css" />
+    <Content Include="Assets\Admin\css\MyCss\ImportBillStyle1.css" />
     <Content Include="Assets\Admin\css\MyCss\MemberStyle.css" />
-    <Content Include="Assets\Admin\css\MyCss\ProductStyle1.css" />
-    <Content Include="Assets\Admin\css\MyCss\ProductStyle2.css" />
     <Content Include="Assets\Admin\css\MyCss\ProductStyle3.css" />
     <Content Include="Assets\Admin\css\style.css" />
     <Content Include="Assets\Admin\fonts\fontawesome-webfont.svg" />
@@ -277,6 +278,8 @@
     <Content Include="Assets\Admin\js\jquery.nicescroll.js" />
     <Content Include="Assets\Admin\js\modernizr.min.js" />
     <Content Include="Assets\Admin\js\MyScript\BrandScript.js" />
+    <Content Include="Assets\Admin\js\MyScript\ImportBillDetailScript.js" />
+    <Content Include="Assets\Admin\js\MyScript\ImportBillScript.js" />
     <Content Include="Assets\Admin\js\MyScript\LoadImageScript.js" />
     <Content Include="Assets\Admin\js\MyScript\MemberScript.js" />
     <Content Include="Assets\Admin\js\MyScript\MemberStatusScript1.js" />
@@ -325,6 +328,10 @@
     <Content Include="Areas\Admin\Views\Product\Update.cshtml" />
     <Content Include="Areas\Admin\Views\Product\ProductListPartial.cshtml" />
     <Content Include="Areas\Admin\Views\ImportBill\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ImportBill\ImportBillListPartial.cshtml" />
+    <Content Include="Areas\Admin\Views\ImportBillDetail\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ImportBill\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\ImportBill\Update.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

@@ -1,0 +1,15 @@
+﻿ 
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px 10px;
+}
+
+.tr-delete {
+    background-color: #f6e58d !important;
+}
+
+.div-alert {
+    padding: 10px;
+}

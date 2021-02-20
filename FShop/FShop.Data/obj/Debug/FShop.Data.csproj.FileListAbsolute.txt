@@ -21,3 +21,4 @@ C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.D
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Data\obj\Debug\FShop.Data.Migrations.Update_Brand_Entity.resources
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Data\obj\Debug\FShop.Data.Migrations.Update_Supplier_entity.resources
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Data\obj\Debug\FShop.Data.Migrations.update_product_entity.resources
+C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Data\obj\Debug\FShop.Data.Migrations.update_ImportBill_ImportBillDetail_entity.resources

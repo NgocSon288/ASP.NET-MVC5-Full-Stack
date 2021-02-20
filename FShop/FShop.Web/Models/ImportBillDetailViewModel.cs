@@ -20,10 +20,8 @@ namespace FShop.Web.Models
         [Required]
         public int ProductID { get; set; }
 
-        [ForeignKey("ProductID")]
         public virtual ProductViewModel Product { get; set; }
 
-        [ForeignKey("ImportBillID")]
         public virtual ImportBillViewModel ImportBill { get; set; }
     }
 }

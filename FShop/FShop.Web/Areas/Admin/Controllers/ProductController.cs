@@ -256,6 +256,25 @@ namespace FShop.Web.Areas.Admin.Controllers
             return View(model);
         }
 
+        public ActionResult UpdatePrice(int id, decimal price, decimal promotion)
+        {
+            try
+            {
+                var product = _productService.GetByID(id);
+
+                product.Price = price;
+                product.Promotion = promotion;
+
+                _productService.SaveChanges();
+
+                return Content(price.ToString("#,##") + "|" + promotion.ToString("#,##"));
+            }
+            catch (Exception)
+            {
+                return Content("1");
+            }
+        }
+
         [HttpPost]
         public ActionResult Delete(int id, bool status)
         {

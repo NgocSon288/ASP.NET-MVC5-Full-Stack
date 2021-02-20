@@ -1,0 +1,7 @@
+﻿.div-price, .div-promotion{
+    display: inline-block;
+}
+
+.input-border-validate{
+    border: 1px solid red;
+}

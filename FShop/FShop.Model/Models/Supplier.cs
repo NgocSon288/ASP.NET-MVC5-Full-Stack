@@ -22,9 +22,7 @@ namespace FShop.Model.Models
         [Phone]
         public string PhoneNumber { get; set; }
 
-        public string Fax { get; set; }
-
-        public virtual IEnumerable<ImportBill> ImportBills { get; set; }
+        public string Fax { get; set; } 
 
         public virtual IEnumerable<Product> Products { get; set; }
     }

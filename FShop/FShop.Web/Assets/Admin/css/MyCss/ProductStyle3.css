@@ -6,6 +6,12 @@
     display: inline-block;
 }
 
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px 10px;
+}
+
 image {
     width: 100%;
     height: 100%;

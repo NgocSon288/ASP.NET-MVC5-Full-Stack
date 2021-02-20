@@ -81,6 +81,8 @@ namespace FShop.Data.Infrastructure
 
         public IEnumerable<T> GetAll(string[] includes = null)
         {
+            dataContext.ImportBills.Include(ia => ia.ImportBillDetails);
+
             //HANDLE INCLUDES FOR ASSOCIATED OBJECTS IF APPLICABLE
             if (includes != null && includes.Count() > 0)
             {
