@@ -1,8 +1,6 @@
 
 Comment				client	+	admin
-CategoryNotification		admin
-Slide	- Advertisement		admin
-PaymentMethod			admin
+CategoryNotification		admin 
 Order				client	+ 	admin
 OrderStatus			client	+ 	admin
 OrderDetail			client 	+ 	admin

@@ -1,0 +1,61 @@
+﻿@model List<FShop.Web.Models.PaymentMethodViewModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    var i = 1;
+}
+
+@section css{
+    <link href="~/Assets/Admin/css/MyCss/PaymentMethodStyle.css" rel="stylesheet" />
+} 
+
+@section header{
+    Quản lý phương thức thanh toán
+}
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Mô tả</th>
+            <th>Modify</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@(i++)</td>
+                <td>
+                    <button class="btn-edit">
+                        <i class="fa fa-edit bg-warning"></i>
+                    </button>
+                    <input value="@item.Description" class="hidden form-control"/>
+                    <label>
+                        @item.Description
+                    </label>
+                </td>
+                <td>
+                    <span class="btn btn-primary btn-update" data-id="@item.ID">Cập nhật</span>
+                    <span class="btn btn-danger btn-delete" data-id="@item.ID">Xóa</span>
+                </td>
+            </tr>
+        }
+        <tr class="hidden" id="new-row">
+            <td></td>
+            <td>
+                <input type="text" class="form-control" placeholder="Mô tả ngắn gọn..." id="txt-description" />
+            </td>
+            <td>
+                <button class="btn btn-success btn-add-payment-method">Thêm</button>
+                <button class="btn btn-danger btn-delete-new-row ml-3"><i class="fa fa-minus"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<span class="btn btn-primary btn-add-row"><i class="fa fa-plus"></i></span>
+
+@section script{ 
+    <script src="~/Assets/Admin/js/MyScript/PaymentMethodScript.js"></script>
+}

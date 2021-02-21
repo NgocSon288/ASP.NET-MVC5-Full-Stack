@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace FShop.Web.Models
@@ -8,11 +9,11 @@ namespace FShop.Web.Models
         [Key]
         public int ID { get; set; }
 
-        [Required]
         public int Status { get; set; }
 
+        [DisplayName("Mô tả")]
         public string Description { get; set; }
 
-        public virtual IEnumerable<OrderViewModel> Orders { get; set; }
+        public virtual List<OrderViewModel> Orders { get; set; }
     }
 }
