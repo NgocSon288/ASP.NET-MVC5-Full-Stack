@@ -12,9 +12,10 @@ namespace FShop.Web.AutoMapperConfig
             // Advertisement
             CreateMap<Advertisement, AdvertisementViewModel>()
                 .ForMember(model => model.Description,
-                    map => map.MapFrom(p => p.Description + " XXX AAA"))
+                    map => map.MapFrom(p => p.Description))
                 .ForMember(model => model.URL,
-                    map => map.MapFrom(p => "localhost://" + p.URL));
+                    map => map.MapFrom(p => p.URL));
+            CreateMap<AdvertisementViewModel, Advertisement>();
 
             // Brand
             CreateMap<Brand, BrandViewModel>();

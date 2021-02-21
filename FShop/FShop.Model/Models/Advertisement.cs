@@ -1,10 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using FShop.Model.Abstract;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FShop.Model.Models
 {
     [Table("Advertisements")]
-    public class Advertisement
+    public class Advertisement : Auditable
     {
         [Key]
         public int ID { get; set; }
@@ -20,7 +21,5 @@ namespace FShop.Model.Models
         public string URL { get; set; }
 
         public int? DisplayOrder { get; set; }
-
-        public bool? Status { get; set; }
     }
 }

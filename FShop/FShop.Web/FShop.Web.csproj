@@ -169,6 +169,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdvertisementController.cs" />
     <Compile Include="Areas\Admin\Controllers\BaseAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\BrandController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
@@ -216,6 +217,7 @@
     <Content Include="Assets\Admin\css\geochart.css" />
     <Content Include="Assets\Admin\css\hover.css" />
     <Content Include="Assets\Admin\css\magnific-popup.css" />
+    <Content Include="Assets\Admin\css\MyCss\AdvertisementStyle.css" />
     <Content Include="Assets\Admin\css\MyCss\ImportBillDetailStyle.css" />
     <Content Include="Assets\Admin\css\MyCss\ImportBillStyle1.css" />
     <Content Include="Assets\Admin\css\MyCss\MemberStyle.css" />
@@ -232,12 +234,15 @@
     <Content Include="Assets\Admin\images\icon.png" />
     <Content Include="Assets\Admin\images\login.jpg" />
     <Content Include="Assets\Admin\images\mess.png" />
+    <Content Include="Assets\Admin\images\MyImages\Advertisement\slide-1.jpg" />
+    <Content Include="Assets\Admin\images\MyImages\Advertisement\slide-2.jpg" />
     <Content Include="Assets\Admin\images\MyImages\Brand\apple.jpg" />
     <Content Include="Assets\Admin\images\MyImages\Brand\oppo.jpg" />
     <Content Include="Assets\Admin\images\MyImages\Brand\samsung.jpg" />
     <Content Include="Assets\Admin\images\MyImages\Brand\vivo.jpg" />
     <Content Include="Assets\Admin\images\MyImages\Member\admin.jpg" />
     <Content Include="Assets\Admin\images\MyImages\Member\quynh.png" />
+    <Content Include="Assets\Admin\images\MyImages\Member\slide-2.jpg" />
     <Content Include="Assets\Admin\images\MyImages\ProductCategory\cellphone.jpg" />
     <Content Include="Assets\Admin\images\MyImages\ProductCategory\laptop.jpg" />
     <Content Include="Assets\Admin\images\MyImages\ProductCategory\smartwatch.jpg" />
@@ -277,6 +282,8 @@
     <Content Include="Assets\Admin\js\jquery.magnific-popup.js" />
     <Content Include="Assets\Admin\js\jquery.nicescroll.js" />
     <Content Include="Assets\Admin\js\modernizr.min.js" />
+    <Content Include="Assets\Admin\js\MyScript\AdvertisementScript.js" />
+    <Content Include="Assets\Admin\js\MyScript\AdvertisementScript1.js" />
     <Content Include="Assets\Admin\js\MyScript\BrandScript.js" />
     <Content Include="Assets\Admin\js\MyScript\ImportBillDetailScript.js" />
     <Content Include="Assets\Admin\js\MyScript\ImportBillScript.js" />
@@ -332,6 +339,10 @@
     <Content Include="Areas\Admin\Views\ImportBillDetail\Index.cshtml" />
     <Content Include="Areas\Admin\Views\ImportBill\Add.cshtml" />
     <Content Include="Areas\Admin\Views\ImportBill\Update.cshtml" />
+    <Content Include="Areas\Admin\Views\Advertisement\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Advertisement\Show.cshtml" />
+    <Content Include="Areas\Admin\Views\Advertisement\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Advertisement\Update.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

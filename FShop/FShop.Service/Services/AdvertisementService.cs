@@ -11,6 +11,8 @@ namespace FShop.Service.Services
 {
     public interface IAdvertisementService
     {
+        Advertisement GetByDisplayOrder(int displayOrder);
+
         Advertisement Insert(Advertisement entity);
 
         void Update(Advertisement entity);
@@ -58,6 +60,11 @@ namespace FShop.Service.Services
         public IEnumerable<Advertisement> GetAllPaging(int page, int pageSize, out int totalRow)
         {
             return _advertisementRepository.GetMultiPaging(ad => ad.Status.Value, out totalRow, page, pageSize);
+        }
+
+        public Advertisement GetByDisplayOrder(int displayOrder)
+        {
+            return _advertisementRepository.GetSingleByCondition(ad => ad.DisplayOrder == displayOrder);
         }
 
         public Advertisement GetByID(int id)

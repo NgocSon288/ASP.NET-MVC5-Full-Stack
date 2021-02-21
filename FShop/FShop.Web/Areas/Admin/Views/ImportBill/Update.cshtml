@@ -6,11 +6,11 @@
 
     var products = ViewBag.Products as List<FShop.Web.Models.ProductViewModel>;
     var modelDetail = Model.ImportBillDetails.ToList();
-} 
+}
 
 @section css{
     <link href="~/Assets/Admin/css/MyCss/ImportBillStyle1.css" rel="stylesheet" />
-} 
+}
 
 @section header{
     Cập nhật chi thiết phiếu nhập @(Model.ImportBillDetails.FirstOrDefault() != null ? Model.ImportBillDetails.FirstOrDefault().ImportBillID.ToString(): "")
@@ -27,7 +27,7 @@
         <table>
             <thead>
                 <tr>
-                    <th>Tên sản phẩm</th>
+                    <th>ID - Tên sản phẩm</th>
                     <th>Số lượng</th>
                     <th>Giá</th>
                     <th></th>
@@ -39,7 +39,7 @@
                         <select class="form-control productid">
                             @foreach (var item in products)
                             {
-                                <option value="@item.ID">@item.Name</option>
+                                <option value="@item.ID">@item.ID - @item.Name</option>
                             }
                         </select>
                     </td>
@@ -64,11 +64,11 @@
                                     {
                                         if (modelDetail[i].ProductID == item.ID)
                                         {
-                                            <option value="@item.ID" selected>@item.Name</option>
+                                            <option value="@item.ID" selected>@item.ID - @item.Name</option>
                                         }
                                         else
                                         {
-                                            <option value="@item.ID">@item.Name</option>
+                                            <option value="@item.ID">@item.ID - @item.Name</option>
                                         }
                                     }
                                 </select>
@@ -81,7 +81,7 @@
                             </td>
                             <td>
                                 <span class="btn btn-danger btn-delete-row"><i class="fa fa-minus"></i></span>
-                                <input type="hidden" name="[@i].ID" value="@modelDetail[i].ID"/>
+                                <input type="hidden" name="[@i].ID" value="@modelDetail[i].ID" />
                             </td>
                         </tr>
                     }

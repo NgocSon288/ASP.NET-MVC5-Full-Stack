@@ -13,12 +13,3 @@ ORDER thêm thuộc tính số tiền lúc mua
 
  
 *****************************************************
-
-chỉnh sửa chọn tên cho đẹp
-
-trang billdetail -> get by billid
-
-
-+ cập nhật giá bán trong hiển thị CTPN
-
- 

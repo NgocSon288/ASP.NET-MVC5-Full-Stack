@@ -1,0 +1,81 @@
+﻿@model List<FShop.Web.Models.AdvertisementViewModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    var src = "";
+    try
+    {
+        src = Model.FirstOrDefault().Image;
+    }
+    catch (Exception)
+    {
+        src = "";
+    }
+}
+
+@section css{
+    <link href="~/Assets/Admin/css/MyCss/AdvertisementStyle.css" rel="stylesheet" />
+}
+
+@section header{
+    Quản lý quảng cáo
+}
+
+<div class="w-100 main-image">
+    @if (src == "")
+    {
+        <span class="alert alert-danger">Chưa có quảng cáo nào</span>
+    }
+    else
+    {
+        <div class="mx-auto w-50">
+            <img src="~/Assets/Admin/images/MyImages/Advertisement/@src" class="w-100 main-image" id="main-img" />
+        </div>
+    }
+</div>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <td>
+                <a href="@Url.Action("Add", "Advertisement")" class="btn btn-primary"><i class="fa fa-plus"></i> Thêm quản cáo</a>
+            </td>
+            @if (Model != null && Model.Count > 0)
+            {
+                <td>
+                    <a href="@Url.Action("Show", "Advertisement")" class="btn btn-primary"><i class="fa fa-slideshare"></i> Trình chiếu</a>
+                </td>
+            }
+        </tr>
+        <tr>
+            <th>Thứ tự</th>
+            <th>Hình ảnh</th>
+            <th>Tên</th>
+            <th>Mô tả</th>
+            <th>URL</th>
+            <th>Modify</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrderBy(ad => ad.DisplayOrder))
+        {
+            <tr class="tr-cursor" data-src="/Assets/Admin/images/MyImages/Advertisement/@item.Image">
+                <td>@item.DisplayOrder</td>
+                <td>
+                    <img src="~/Assets/Admin/images/MyImages/Advertisement/@item.Image" width="100" />
+                </td>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.URL</td>
+                <td>
+                    <a href="@Url.Action("Update", "Advertisement", new { @id=item.ID })" class="btn btn-primary btn-update">Cập nhật</a>
+                    <a href="@Url.Action("Delete", "Advertisement", new { @id=item.ID })" class="btn btn-danger">Xóa</a>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+@section script{
+    <script src="~/Assets/Admin/js/MyScript/AdvertisementScript1.js"></script>
+}

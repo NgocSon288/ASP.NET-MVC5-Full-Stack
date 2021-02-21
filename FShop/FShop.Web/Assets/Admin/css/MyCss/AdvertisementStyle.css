@@ -1,0 +1,14 @@
+﻿body {
+}
+
+.img-sl {
+    height: 600px;
+}
+.tr-cursor{
+    cursor: pointer;
+}
+
+.main-image{
+    height: 600px;
+    cursor: pointer;
+}
