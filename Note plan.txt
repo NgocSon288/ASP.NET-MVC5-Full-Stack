@@ -1,5 +1,4 @@
 
-Permission			Admin
 PermissionCategoryMember	Admin
 	+ Phân quyền
 
