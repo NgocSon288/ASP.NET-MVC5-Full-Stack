@@ -38,7 +38,9 @@ namespace FShop.Model.Models
         public string IsAnotherIdentity { get; set; }
 
         [Required]
-        public int MemberStatusID { get; set; }
+        public int MemberStatusID { get; set; } 
+
+        public virtual CategoryMember CategoryMember { get; set; }
 
         [ForeignKey("MemberStatusID")]
         public virtual MemberStatus MemberStatus { get; set; }

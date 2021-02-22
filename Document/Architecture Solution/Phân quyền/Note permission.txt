@@ -1,0 +1,24 @@
+- Thiết kế CSDL (Permission, PermissionMember)
+- Viết phương thức xử lý Login (Truy vần quyền)
+- Cấu hình Global.asax
+- Cấu hình Web.Config
+- Gán quyền cho các action, controller
+
+************************************************
+
+*** Table
+	CategoryMember
+
+	Permission
+		+ ID: NVARCHAR(50)
+		+ Name
+	
+	CategoryMemberPermission
+		+ ID: INT
+		+ CategoryMemberID
+		+ PermissionID
+		+ Description
+
+* Tạo hàm để xử lý quyền trong Base
+
+* Khi đăng nhập thành công, gọi hàm phân quyền

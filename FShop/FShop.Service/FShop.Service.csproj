@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Services\AdvertisementService.cs" />
     <Compile Include="Services\BrandService.cs" />
+    <Compile Include="Services\CategoryMemberService.cs" />
     <Compile Include="Services\CategoryNotificationService.cs" />
     <Compile Include="Services\CommentService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,6 +67,8 @@
     <Compile Include="Services\OrderService.cs" />
     <Compile Include="Services\OrderStatusService.cs" />
     <Compile Include="Services\PaymentMethodService.cs" />
+    <Compile Include="Services\PermissionCategoryMemberService.cs" />
+    <Compile Include="Services\PermissionService.cs" />
     <Compile Include="Services\ProductCategoryService.cs" />
     <Compile Include="Services\ProductService.cs" />
     <Compile Include="Services\SlideService.cs" />

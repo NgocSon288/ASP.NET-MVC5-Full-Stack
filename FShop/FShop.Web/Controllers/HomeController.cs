@@ -11,7 +11,7 @@ namespace FShop.Web.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            return RedirectToRoute("TestLoginAdmin");
         }
     }
 }

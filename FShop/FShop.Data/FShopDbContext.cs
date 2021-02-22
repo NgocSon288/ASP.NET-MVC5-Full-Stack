@@ -13,6 +13,7 @@ namespace FShop.Data
 
         public DbSet<Advertisement> Advertisements { set; get; }
         public DbSet<Brand> Brands { set; get; }
+        public DbSet<CategoryMember> CategoryMembers { set; get; }
         public DbSet<CategoryNotification> CategoryNotifications { set; get; }
         public DbSet<Comment> Comments { set; get; }
         public DbSet<ImportBill> ImportBills { set; get; }
@@ -25,6 +26,8 @@ namespace FShop.Data
         public DbSet<OrderDetail> OrderDetails { set; get; }
         public DbSet<OrderStatus> OrderStatuses { set; get; }
         public DbSet<PaymentMethod> PaymentMethods { set; get; }
+        public DbSet<Permission> Permissions { set; get; }
+        public DbSet<PermissionCategoryMember> PermissionCategoryMembers { set; get; }
         public DbSet<Product> Products { set; get; }
         public DbSet<ProductCategory> ProductCategory { set; get; }
         public DbSet<Slide> Slides { set; get; }

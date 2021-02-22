@@ -172,6 +172,7 @@
     <Compile Include="Areas\Admin\Controllers\AdvertisementController.cs" />
     <Compile Include="Areas\Admin\Controllers\BaseAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\BrandController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoryMemberController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryNotificationController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ImportBillController.cs" />
@@ -191,6 +192,7 @@
     <Compile Include="Infrastructure\Core\ControllerBase.cs" />
     <Compile Include="Models\AdvertisementViewModel.cs" />
     <Compile Include="Models\BrandViewModel.cs" />
+    <Compile Include="Models\CategoryMemberViewModel.cs" />
     <Compile Include="Models\CategoryNotificationViewModel.cs" />
     <Compile Include="Models\CommentViewModel.cs" />
     <Compile Include="Models\ImportBillDetailViewModel.cs" />
@@ -205,6 +207,8 @@
     <Compile Include="Models\OrderStatusViewModel.cs" />
     <Compile Include="Models\OrderViewModel.cs" />
     <Compile Include="Models\PaymentMethodViewModel.cs" />
+    <Compile Include="Models\PermissionCategoryMemberViewModel.cs" />
+    <Compile Include="Models\PermissionViewModel.cs" />
     <Compile Include="Models\ProductCategoryViewModel.cs" />
     <Compile Include="Models\ProductViewModel.cs" />
     <Compile Include="Models\SlideViewModel.cs" />
@@ -220,6 +224,7 @@
     <Content Include="Assets\Admin\css\hover.css" />
     <Content Include="Assets\Admin\css\magnific-popup.css" />
     <Content Include="Assets\Admin\css\MyCss\AdvertisementStyle.css" />
+    <Content Include="Assets\Admin\css\MyCss\CategoryMemberStyle.css" />
     <Content Include="Assets\Admin\css\MyCss\CategoryNotificationStyle.css" />
     <Content Include="Assets\Admin\css\MyCss\ImportBillDetailStyle.css" />
     <Content Include="Assets\Admin\css\MyCss\ImportBillStyle1.css" />
@@ -288,8 +293,8 @@
     <Content Include="Assets\Admin\js\modernizr.min.js" />
     <Content Include="Assets\Admin\js\MyScript\AdvertisementScript1.js" />
     <Content Include="Assets\Admin\js\MyScript\BrandScript.js" />
-    <Content Include="Assets\Admin\js\MyScript\CategoryNotificationScript.js" />
-    <Content Include="Assets\Admin\js\MyScript\CategoryNotificationScript1.js" />
+    <Content Include="Assets\Admin\js\MyScript\CategoryMemberScript.js" />
+    <Content Include="Assets\Admin\js\MyScript\CategoryNotificationScript2.js" />
     <Content Include="Assets\Admin\js\MyScript\ImportBillDetailScript.js" />
     <Content Include="Assets\Admin\js\MyScript\ImportBillScript.js" />
     <Content Include="Assets\Admin\js\MyScript\LoadImageScript.js" />
@@ -351,6 +356,7 @@
     <Content Include="Areas\Admin\Views\Advertisement\Update.cshtml" />
     <Content Include="Areas\Admin\Views\PaymentMethod\Index.cshtml" />
     <Content Include="Areas\Admin\Views\CategoryNotification\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\CategoryMember\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

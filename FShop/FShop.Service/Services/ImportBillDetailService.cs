@@ -1,11 +1,7 @@
 ﻿using FShop.Data.Infrastructure;
 using FShop.Data.Repositories;
 using FShop.Model.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FShop.Service.Services
 {
@@ -32,13 +28,12 @@ namespace FShop.Service.Services
         ImportBillDetail GetByID(int id);
 
         void SaveChanges();
-
     }
+
     public class ImportBillDetailService : IImportBillDetailService
     {
         private readonly IImportBillDetailRepository _ImportBillDetailRepository;
         private readonly IUnitOfWork _unitOfWork;
-
 
         public ImportBillDetailService(IImportBillDetailRepository ImportBillDetailRepository, IUnitOfWork unitOfWork)
         {

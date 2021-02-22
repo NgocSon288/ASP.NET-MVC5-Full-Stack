@@ -39,7 +39,8 @@ namespace FShop.Web.App_Start
 
             // Repositories
             builder.RegisterAssemblyTypes(typeof(AdvertisementRepository).Assembly) .Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerRequest(); 
-            builder.RegisterAssemblyTypes(typeof(BrandRepository).Assembly) .Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerRequest(); 
+            builder.RegisterAssemblyTypes(typeof(BrandRepository).Assembly) .Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerRequest();
+            builder.RegisterAssemblyTypes(typeof(CategoryMemberRepository).Assembly).Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerRequest();
             builder.RegisterAssemblyTypes(typeof(CategoryNotificationRepository).Assembly) .Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerRequest(); 
             builder.RegisterAssemblyTypes(typeof(CommentRepository).Assembly) .Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerRequest(); 
             builder.RegisterAssemblyTypes(typeof(ImportBillRepository).Assembly) .Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerRequest(); 
@@ -50,8 +51,10 @@ namespace FShop.Web.App_Start
             builder.RegisterAssemblyTypes(typeof(NotificationRepository).Assembly) .Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerRequest(); 
             builder.RegisterAssemblyTypes(typeof(OrderRepository).Assembly) .Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerRequest(); 
             builder.RegisterAssemblyTypes(typeof(OrderDetailRepository).Assembly) .Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerRequest(); 
-            builder.RegisterAssemblyTypes(typeof(OrderStatusRepository).Assembly) .Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerRequest(); 
-            builder.RegisterAssemblyTypes(typeof(PaymentMethodRepository).Assembly) .Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerRequest(); 
+            builder.RegisterAssemblyTypes(typeof(OrderStatusRepository).Assembly) .Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerRequest();
+            builder.RegisterAssemblyTypes(typeof(PaymentMethodRepository).Assembly).Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerRequest();
+            builder.RegisterAssemblyTypes(typeof(PermissionRepository).Assembly).Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerRequest();
+            builder.RegisterAssemblyTypes(typeof(PermissionCategoryMemberRepository).Assembly).Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerRequest();
             builder.RegisterAssemblyTypes(typeof(ProductRepository).Assembly) .Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerRequest(); 
             builder.RegisterAssemblyTypes(typeof(ProductCategoryRepository).Assembly) .Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerRequest(); 
             builder.RegisterAssemblyTypes(typeof(SlideRepository).Assembly) .Where(t => t.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerRequest(); 
@@ -60,6 +63,7 @@ namespace FShop.Web.App_Start
             // Services
             builder.RegisterAssemblyTypes(typeof(AdvertisementService).Assembly).Where(t => t.Name.EndsWith("Service")).AsImplementedInterfaces().InstancePerRequest();
             builder.RegisterAssemblyTypes(typeof(BrandService).Assembly).Where(t => t.Name.EndsWith("Service")).AsImplementedInterfaces().InstancePerRequest();
+            builder.RegisterAssemblyTypes(typeof(CategoryMemberService).Assembly).Where(t => t.Name.EndsWith("Service")).AsImplementedInterfaces().InstancePerRequest();
             builder.RegisterAssemblyTypes(typeof(CategoryNotificationService).Assembly).Where(t => t.Name.EndsWith("Service")).AsImplementedInterfaces().InstancePerRequest();
             builder.RegisterAssemblyTypes(typeof(CommentService).Assembly).Where(t => t.Name.EndsWith("Service")).AsImplementedInterfaces().InstancePerRequest();
             builder.RegisterAssemblyTypes(typeof(ImportBillService).Assembly).Where(t => t.Name.EndsWith("Service")).AsImplementedInterfaces().InstancePerRequest();
@@ -72,6 +76,8 @@ namespace FShop.Web.App_Start
             builder.RegisterAssemblyTypes(typeof(OrderDetailService).Assembly).Where(t => t.Name.EndsWith("Service")).AsImplementedInterfaces().InstancePerRequest();
             builder.RegisterAssemblyTypes(typeof(OrderStatusService).Assembly).Where(t => t.Name.EndsWith("Service")).AsImplementedInterfaces().InstancePerRequest();
             builder.RegisterAssemblyTypes(typeof(PaymentMethodService).Assembly).Where(t => t.Name.EndsWith("Service")).AsImplementedInterfaces().InstancePerRequest();
+            builder.RegisterAssemblyTypes(typeof(PermissionCategoryMemberService).Assembly).Where(t => t.Name.EndsWith("Service")).AsImplementedInterfaces().InstancePerRequest();
+            builder.RegisterAssemblyTypes(typeof(PermissionService).Assembly).Where(t => t.Name.EndsWith("Service")).AsImplementedInterfaces().InstancePerRequest();
             builder.RegisterAssemblyTypes(typeof(ProductService).Assembly).Where(t => t.Name.EndsWith("Service")).AsImplementedInterfaces().InstancePerRequest();
             builder.RegisterAssemblyTypes(typeof(ProductCategoryService).Assembly).Where(t => t.Name.EndsWith("Service")).AsImplementedInterfaces().InstancePerRequest();
             builder.RegisterAssemblyTypes(typeof(SlideService).Assembly).Where(t => t.Name.EndsWith("Service")).AsImplementedInterfaces().InstancePerRequest();

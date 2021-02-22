@@ -4,8 +4,6 @@ using FShop.Model.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FShop.Service.Services
 {
@@ -28,14 +26,13 @@ namespace FShop.Service.Services
         ImportBill GetByID(int id);
 
         void SaveChanges();
-
     }
+
     public class ImportBillService : IImportBillService
     {
         private readonly IImportBillRepository _ImportBillRepository;
         private readonly IImportBillDetailRepository _importBillDetailRepository;
         private readonly IUnitOfWork _unitOfWork;
-
 
         public ImportBillService(IImportBillRepository ImportBillRepository, IImportBillDetailRepository importBillDetailRepository, IUnitOfWork unitOfWork)
         {
@@ -72,7 +69,6 @@ namespace FShop.Service.Services
 
             return import;
         }
-
 
         public IEnumerable<ImportBill> GetImportBillPage(int page, int pageSize, out int pageMax, DateTime? startDate, DateTime? endDate)
         {

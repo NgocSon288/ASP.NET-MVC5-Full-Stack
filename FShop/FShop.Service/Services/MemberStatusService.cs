@@ -1,11 +1,7 @@
 ﻿using FShop.Data.Infrastructure;
 using FShop.Data.Repositories;
 using FShop.Model.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FShop.Service.Services
 {
@@ -26,13 +22,12 @@ namespace FShop.Service.Services
         MemberStatus GetByID(int id);
 
         void SaveChanges();
-
     }
+
     public class MemberStatusService : IMemberStatusService
     {
         private readonly IMemberStatusRepository _MemberStatusRepository;
         private readonly IUnitOfWork _unitOfWork;
-
 
         public MemberStatusService(IMemberStatusRepository MemberStatusRepository, IUnitOfWork unitOfWork)
         {

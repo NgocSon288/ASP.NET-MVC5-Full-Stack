@@ -21,6 +21,10 @@ namespace FShop.Web.AutoMapperConfig
             CreateMap<Brand, BrandViewModel>();
             CreateMap<BrandViewModel, Brand>();
 
+            // CategoryMember
+            CreateMap<CategoryMember, CategoryMemberViewModel>();
+            CreateMap<CategoryMemberViewModel, CategoryMember>();
+
             // CategoryNotify
             CreateMap<CategoryNotification, CategoryNotificationViewModel>();
             CreateMap<CategoryNotificationViewModel, CategoryNotification>();
@@ -73,6 +77,14 @@ namespace FShop.Web.AutoMapperConfig
             // PaymentMethod
             CreateMap<PaymentMethod, PaymentMethodViewModel>();
             CreateMap<PaymentMethodViewModel, PaymentMethod>();
+
+            // PermissionCategoryMember
+            CreateMap<PermissionCategoryMember, PermissionCategoryMember>();
+            CreateMap<PermissionCategoryMember, PermissionCategoryMember>();
+
+            // Permission
+            CreateMap<Permission, PermissionViewModel>();
+            CreateMap<PermissionViewModel, Permission>();
 
             // Product
             CreateMap<Product, ProductViewModel>();

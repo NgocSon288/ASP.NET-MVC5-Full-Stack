@@ -1,4 +1,8 @@
 
+Permission			Admin
+PermissionCategoryMember	Admin
+	+ Phân quyền
+
 Comment				client	+	admin
 Order				client	+ 	admin
 OrderStatus			client	+ 	admin
@@ -10,3 +14,5 @@ ORDER thêm thuộc tính số tiền lúc mua
 
  
 *****************************************************
+
+

@@ -17,6 +17,8 @@
         $(".btn-delete-new-row").off("click").on("click", function () {
             $(this).parents("tr").addClass("hidden");
             $("#txt-description").val("");
+            $("#txt-color").val("");
+            $("#txt-icon").val("");
         })
     },
     addCategoryNotificaction: function () {
@@ -25,18 +27,31 @@
             var description = $("#txt-description").val();
             var color = $("#txt-color").val();
             var icon = $("#txt-icon").val();
+            var check = true;
 
             if (!description) {
                 $("#txt-description").addClass("input-border-validate");
-            } else if (!color) {
-                $("#txt-color").addClass("input-border-validate");
-            } else if (!icon) {
-                $("#txt-icon").addClass("input-border-validate");
+                check = false;
             } else {
-                $("#new-row").addClass("hidden");
                 $("#txt-description").removeClass("input-border-validate");
+                check = true;
+            }
+            if (!color) {
+                $("#txt-color").addClass("input-border-validate");
+                check = false;
+            } else {
                 $("#txt-color").removeClass("input-border-validate");
+                check = true;
+            }
+            if (!icon) {
+                $("#txt-icon").addClass("input-border-validate");
+                check = false;
+            } else {
                 $("#txt-icon").removeClass("input-border-validate");
+                check = true;
+            }
+            if (check) {
+                $("#new-row").addClass("hidden");
                 $("#txt-description").val("");
                 $("#txt-color").val("");
                 $("#txt-icon").val("");
@@ -59,9 +74,9 @@
     clickEdit: function () {
         $(".btn-edit").off("click").on("click", function () {
             var parent = $(this).parents("tr");
-            var description = parent.find(".lbl-description").val();
-            var color = parent.find(".lbl-color").val();
-            var icon = parent.find(".lbl-icon").val();
+            var description = parent.find(".lbl-description").text();
+            var color = parent.find(".lbl-color").text();
+            var icon = parent.find(".lbl-icon").data("icon");
 
             parent.prev().find(".txt-description").val(description);
             parent.prev().find(".txt-color").val(color);
@@ -90,20 +105,26 @@
             if (!description) {
                 $("#txt-description").addClass("input-border-validate");
                 check = false;
+            } else {
+                $("#txt-description").removeClass("input-border-validate");
+                check = true;
             }
             if (!color) {
                 $("#txt-color").addClass("input-border-validate");
                 check = false;
+            } else {
+                $("#txt-color").removeClass("input-border-validate");
+                check = true;
             }
             if (!icon) {
                 $("#txt-icon").addClass("input-border-validate");
                 check = false;
-            }
-            if(check) {
-                $("#new-row").addClass("hidden");
-                $("#txt-description").removeClass("input-border-validate");
-                $("#txt-color").removeClass("input-border-validate");
+            } else {
                 $("#txt-icon").removeClass("input-border-validate");
+                check = true;
+            }
+            if (check) {
+                $("#new-row").addClass("hidden");
                 $("#txt-description").val("");
                 $("#txt-color").val("");
                 $("#txt-icon").val("");

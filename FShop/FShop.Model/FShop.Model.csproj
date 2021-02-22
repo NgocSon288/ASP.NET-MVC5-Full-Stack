@@ -55,6 +55,8 @@
     <Compile Include="Abstract\IAuditable.cs" />
     <Compile Include="Models\Advertisement.cs" />
     <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\CategoryMember.cs" />
+    <Compile Include="Models\PermissionCategoryMember.cs" />
     <Compile Include="Models\CategoryNotification.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\ImportBill.cs" />
@@ -67,6 +69,7 @@
     <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\OrderStatus.cs" />
     <Compile Include="Models\PaymentMethod.cs" />
+    <Compile Include="Models\Permission.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductCategory.cs" />
     <Compile Include="Models\Slide.cs" />

@@ -25,3 +25,4 @@ C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.D
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Data\obj\Debug\FShop.Data.Migrations.Update_Advertisement_entity.resources
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Data\obj\Debug\FShop.Data.Migrations.Update_Advertisement_entity_v2.resources
 C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Data\obj\Debug\FShop.Data.Migrations.Update_CategoryNotification_entiry.resources
+C:\Users\18521\OneDrive\Desktop\Full Stack\ASP.NET-MVC5-Full-Stack\FShop\FShop.Data\obj\Debug\FShop.Data.Migrations.Add_Permission.resources

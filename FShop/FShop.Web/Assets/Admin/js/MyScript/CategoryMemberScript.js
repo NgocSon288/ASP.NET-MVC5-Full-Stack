@@ -1,8 +1,8 @@
-﻿var categoryNotification = {
+﻿var categoryMember = {
     init: function () {
         this.addRow();
         this.hiddenNewRow();
-        this.addCategoryNotificaction();
+        this.addCategoryMember();
         this.clickEdit();
         this.clickCloseUpdate();
         this.clickUpdate();
@@ -16,16 +16,23 @@
     hiddenNewRow: function () {
         $(".btn-delete-new-row").off("click").on("click", function () {
             $(this).parents("tr").addClass("hidden");
+            $("#txt-name").val("");
             $("#txt-description").val("");
         })
     },
-    addCategoryNotificaction: function () {
-        $(".btn-add-category-notification").off("click").on("click", function () {
-
+    addCategoryMember: function () {
+        $(".btn-add-category-member").off("click").on("click", function () {
+            var name = $("#txt-name").val();
             var description = $("#txt-description").val();
-            var color = $("#txt-color").val();
-            var icon = $("#txt-icon").val();
             var check = true;
+
+            if (!name) {
+                $("#txt-name").addClass("input-border-validate");
+                check = false;
+            } else {
+                $("#txt-name").removeClass("input-border-validate");
+                check = true;
+            }
 
             if (!description) {
                 $("#txt-description").addClass("input-border-validate");
@@ -34,29 +41,15 @@
                 $("#txt-description").removeClass("input-border-validate");
                 check = true;
             }
-            if (!color) {
-                $("#txt-color").addClass("input-border-validate");
-                check = false;
-            } else {
-                $("#txt-color").removeClass("input-border-validate");
-                check = true;
-            }
-            if (!icon) {
-                $("#txt-icon").addClass("input-border-validate");
-                check = false;
-            } else {
-                $("#txt-icon").removeClass("input-border-validate");
-                check = true;
-            }
+
             if (check) {
                 $("#new-row").addClass("hidden");
+                $("#txt-name").val("");
                 $("#txt-description").val("");
-                $("#txt-color").val("");
-                $("#txt-icon").val("");
 
                 $.ajax({
-                    url: "/Admin/CategoryNotification/Add",
-                    data: { description: description, color: color, icon: icon },
+                    url: "/Admin/CategoryMember/Add",
+                    data: { name: name, description: description },
                     type: "POST",
                     success: function (response) {
                         if (response == "0") {
@@ -72,13 +65,11 @@
     clickEdit: function () {
         $(".btn-edit").off("click").on("click", function () {
             var parent = $(this).parents("tr");
+            var name = parent.find(".lbl-name").text();
             var description = parent.find(".lbl-description").text();
-            var color = parent.find(".lbl-color").text();
-            var icon = parent.find(".lbl-icon").data("icon");
 
+            parent.prev().find(".txt-name").val(name);
             parent.prev().find(".txt-description").val(description);
-            parent.prev().find(".txt-color").val(color);
-            parent.prev().find(".txt-icon").val(icon);
 
             parent.addClass("hidden");
             parent.prev().removeClass("hidden");
@@ -94,11 +85,18 @@
         $(".btn-update").off("click").on("click", function () {
             var parent = $(this).parents("tr");
 
+            var name = parent.find(".txt-name").val();
             var description = parent.find(".txt-description").val();
-            var color = parent.find(".txt-color").val();
-            var icon = parent.find(".txt-icon").val();
             var id = $(this).data("id");
             var check = true;
+
+            if (!name) {
+                $("#txt-name").addClass("input-border-validate");
+                check = false;
+            } else {
+                $("#txt-name").removeClass("input-border-validate");
+                check = true;
+            }
 
             if (!description) {
                 $("#txt-description").addClass("input-border-validate");
@@ -107,29 +105,15 @@
                 $("#txt-description").removeClass("input-border-validate");
                 check = true;
             }
-            if (!color) {
-                $("#txt-color").addClass("input-border-validate");
-                check = false;
-            } else {
-                $("#txt-color").removeClass("input-border-validate");
-                check = true;
-            }
-            if (!icon) {
-                $("#txt-icon").addClass("input-border-validate");
-                check = false;
-            } else {
-                $("#txt-icon").removeClass("input-border-validate");
-                check = true;
-            }
+
             if (check) {
                 $("#new-row").addClass("hidden");
+                $("#txt-name").val("");
                 $("#txt-description").val("");
-                $("#txt-color").val("");
-                $("#txt-icon").val("");
 
                 $.ajax({
-                    url: "/Admin/CategoryNotification/Update",
-                    data: { id: id, description: description, color: color, icon: icon },
+                    url: "/Admin/CategoryMember/Update",
+                    data: { id: id, name: name, description: description },
                     type: "POST",
                     success: function (response) {
                         if (response == "0") {
@@ -147,7 +131,7 @@
             var id = $(this).data("id");
 
             $.ajax({
-                url: "/Admin/CategoryNotification/Delete",
+                url: "/Admin/CategoryMember/Delete",
                 data: { id: id },
                 type: "POST",
                 success: function (response) {
@@ -162,4 +146,4 @@
     }
 }
 
-categoryNotification.init();
+categoryMember.init();

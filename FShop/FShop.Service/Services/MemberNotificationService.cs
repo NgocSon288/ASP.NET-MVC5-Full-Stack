@@ -1,11 +1,7 @@
 ﻿using FShop.Data.Infrastructure;
 using FShop.Data.Repositories;
 using FShop.Model.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FShop.Service.Services
 {
@@ -26,13 +22,12 @@ namespace FShop.Service.Services
         MemberNotification GetByID(int id);
 
         void SaveChanges();
-
     }
+
     public class MemberNotificationService : IMemberNotificationService
     {
         private readonly IMemberNotificationRepository _MemberNotificationRepository;
         private readonly IUnitOfWork _unitOfWork;
-
 
         public MemberNotificationService(IMemberNotificationRepository MemberNotificationRepository, IUnitOfWork unitOfWork)
         {

@@ -108,21 +108,21 @@ namespace FShop.Service.Services
         {
             var products = _ProductRepository.GetAll();
 
-            if(key != null && key != "")
+            if (key != null && key != "")
             {
                 products = products.Where(p => p.Name.ToLower().Contains(key.ToLower()) || p.Alias.ToLower().Contains(key.ToLower()));
             }
 
-            if(installment == -1)
+            if (installment == -1)
             {
                 products = products.Where(p => !p.IsInstallment);
             }
-            else if(installment == 1)
+            else if (installment == 1)
             {
                 products = products.Where(p => p.IsInstallment);
             }
 
-            if(brandID != 0)
+            if (brandID != 0)
             {
                 products = products.Where(p => p.BrandID == brandID);
             }
@@ -149,6 +149,6 @@ namespace FShop.Service.Services
             {
                 return products;
             }
-        } 
+        }
     }
 }

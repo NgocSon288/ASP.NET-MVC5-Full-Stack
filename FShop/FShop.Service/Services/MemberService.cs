@@ -1,10 +1,7 @@
 ﻿using FShop.Data.Infrastructure;
 using FShop.Data.Repositories;
 using FShop.Model.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace FShop.Service.Services
@@ -30,8 +27,8 @@ namespace FShop.Service.Services
         Member GetByID(int id);
 
         void SaveChanges();
-
     }
+
     public class MemberService : IMemberService
     {
         private readonly IMemberRepository _MemberRepository;
@@ -60,17 +57,17 @@ namespace FShop.Service.Services
         {
             var member = await _MemberRepository.GetByUserName(userName);
 
-            if(member == null)
+            if (member == null)
             {
                 return 0;
             }
 
-            if(member.PassWord != passWord)
+            if (member.PassWord != passWord)
             {
                 return -1;
             }
 
-            if(member.MemberStatus.Status == 2)
+            if (member.MemberStatus.Status == 2)
             {
                 return -2;
             }
@@ -109,8 +106,8 @@ namespace FShop.Service.Services
         }
 
         public void SaveChanges()
-        { 
-            _unitOfWork.Commit(); 
+        {
+            _unitOfWork.Commit();
         }
 
         public void Update(Member entity)
