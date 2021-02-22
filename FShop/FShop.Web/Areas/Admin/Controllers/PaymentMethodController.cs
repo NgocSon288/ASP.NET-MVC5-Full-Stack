@@ -20,10 +20,7 @@ namespace FShop.Web.Areas.Admin.Controllers
         // GET: Admin/PaymentMethod
         public ActionResult Index()
         {
-            var data = _paymentMethodService.GetAll().ToList();
-            var vm = AutoMapper.Mapper.Map<List<PaymentMethodViewModel>>(data);
-
-            return View(vm);
+            return View(AutoMapper.Mapper.Map<List<PaymentMethodViewModel>>(_paymentMethodService.GetAll().ToList()));
         }
 
         [HttpPost]

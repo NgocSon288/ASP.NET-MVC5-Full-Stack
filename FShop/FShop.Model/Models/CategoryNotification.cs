@@ -10,8 +10,6 @@ namespace FShop.Model.Models
         [Key]
         public int ID { get; set; }
 
-        public int Status { get; set; }
-
         public string Description { get; set; }
 
         [Required]

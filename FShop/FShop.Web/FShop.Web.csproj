@@ -172,6 +172,7 @@
     <Compile Include="Areas\Admin\Controllers\AdvertisementController.cs" />
     <Compile Include="Areas\Admin\Controllers\BaseAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\BrandController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoryNotificationController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ImportBillController.cs" />
     <Compile Include="Areas\Admin\Controllers\ImportBillDetailController.cs" />
@@ -219,6 +220,7 @@
     <Content Include="Assets\Admin\css\hover.css" />
     <Content Include="Assets\Admin\css\magnific-popup.css" />
     <Content Include="Assets\Admin\css\MyCss\AdvertisementStyle.css" />
+    <Content Include="Assets\Admin\css\MyCss\CategoryNotificationStyle.css" />
     <Content Include="Assets\Admin\css\MyCss\ImportBillDetailStyle.css" />
     <Content Include="Assets\Admin\css\MyCss\ImportBillStyle1.css" />
     <Content Include="Assets\Admin\css\MyCss\MemberStyle.css" />
@@ -286,6 +288,8 @@
     <Content Include="Assets\Admin\js\modernizr.min.js" />
     <Content Include="Assets\Admin\js\MyScript\AdvertisementScript1.js" />
     <Content Include="Assets\Admin\js\MyScript\BrandScript.js" />
+    <Content Include="Assets\Admin\js\MyScript\CategoryNotificationScript.js" />
+    <Content Include="Assets\Admin\js\MyScript\CategoryNotificationScript1.js" />
     <Content Include="Assets\Admin\js\MyScript\ImportBillDetailScript.js" />
     <Content Include="Assets\Admin\js\MyScript\ImportBillScript.js" />
     <Content Include="Assets\Admin\js\MyScript\LoadImageScript.js" />
@@ -346,6 +350,7 @@
     <Content Include="Areas\Admin\Views\Advertisement\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Advertisement\Update.cshtml" />
     <Content Include="Areas\Admin\Views\PaymentMethod\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\CategoryNotification\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

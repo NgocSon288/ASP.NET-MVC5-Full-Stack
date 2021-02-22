@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace FShop.Web.Models
@@ -8,8 +9,6 @@ namespace FShop.Web.Models
         [Key]
         public int ID { get; set; }
 
-        public int Status { get; set; }
-
         public string Description { get; set; }
 
         [Required]
@@ -18,6 +17,6 @@ namespace FShop.Web.Models
         [Required]
         public string Icon { get; set; }
 
-        public virtual IEnumerable<NotificationViewModel> Notifications { get; set; }
+        public virtual List<NotificationViewModel> Notifications { get; set; }
     }
 }

@@ -1,6 +1,5 @@
 
 Comment				client	+	admin
-CategoryNotification		admin 
 Order				client	+ 	admin
 OrderStatus			client	+ 	admin
 OrderDetail			client 	+ 	admin
