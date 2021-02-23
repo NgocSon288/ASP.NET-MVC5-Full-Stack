@@ -181,6 +181,7 @@
     <Compile Include="Areas\Admin\Controllers\MemberController.cs" />
     <Compile Include="Areas\Admin\Controllers\MemberStatusController.cs" />
     <Compile Include="Areas\Admin\Controllers\PaymentMethodController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PermissionCategoryMemberController.cs" />
     <Compile Include="Areas\Admin\Controllers\PermissionController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
@@ -231,6 +232,7 @@
     <Content Include="Assets\Admin\css\MyCss\ImportBillStyle1.css" />
     <Content Include="Assets\Admin\css\MyCss\MemberStyle.css" />
     <Content Include="Assets\Admin\css\MyCss\PaymentMethodStyle.css" />
+    <Content Include="Assets\Admin\css\MyCss\PermissionCategoryMemberStyle1.css" />
     <Content Include="Assets\Admin\css\MyCss\PermissionStyle.css" />
     <Content Include="Assets\Admin\css\MyCss\ProductStyle3.css" />
     <Content Include="Assets\Admin\css\style.css" />
@@ -303,6 +305,7 @@
     <Content Include="Assets\Admin\js\MyScript\MemberScript.js" />
     <Content Include="Assets\Admin\js\MyScript\MemberStatusScript1.js" />
     <Content Include="Assets\Admin\js\MyScript\PaymentMethodScript.js" />
+    <Content Include="Assets\Admin\js\MyScript\PermissionCategoryMemberScript.js" />
     <Content Include="Assets\Admin\js\MyScript\PermissionScript.js" />
     <Content Include="Assets\Admin\js\MyScript\ProductCategoryScript.js" />
     <Content Include="Assets\Admin\js\MyScript\ProductScript4.js" />
@@ -361,6 +364,7 @@
     <Content Include="Areas\Admin\Views\CategoryNotification\Index.cshtml" />
     <Content Include="Areas\Admin\Views\CategoryMember\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Permission\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\PermissionCategoryMember\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

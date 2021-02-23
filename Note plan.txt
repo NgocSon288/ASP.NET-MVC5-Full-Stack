@@ -1,6 +1,4 @@
-
-PermissionCategoryMember	Admin
-	+ Phân quyền
+Phân quyền
 
 Comment				client	+	admin
 Order				client	+ 	admin

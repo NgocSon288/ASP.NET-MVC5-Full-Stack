@@ -7,6 +7,8 @@ namespace FShop.Service.Services
 {
     public interface IPermissionCategoryMemberService
     {
+        bool InsertOrDelete(PermissionCategoryMember permission);
+
         PermissionCategoryMember Insert(PermissionCategoryMember entity);
 
         void Update(PermissionCategoryMember entity);
@@ -63,6 +65,29 @@ namespace FShop.Service.Services
         public PermissionCategoryMember Insert(PermissionCategoryMember entity)
         {
             return _PermissionCategoryMemberRepository.Add(entity);
+        }
+
+        public bool InsertOrDelete(PermissionCategoryMember permission)
+        {
+            try
+            {
+                var permissionCategoryMember = _PermissionCategoryMemberRepository.GetSingleByCondition(p => p.PermissionID == permission.PermissionID && p.CategoryMemberID == permission.CategoryMemberID);
+
+                if (permissionCategoryMember != null)
+                {
+                    _PermissionCategoryMemberRepository.Delete(permissionCategoryMember);
+                }
+                else
+                {
+                    _PermissionCategoryMemberRepository.Add(permission);
+                }
+
+                return true;
+            }
+            catch (System.Exception)
+            {
+                return false;
+            }
         }
 
         public void SaveChanges()

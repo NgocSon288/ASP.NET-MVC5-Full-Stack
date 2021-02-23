@@ -1,0 +1,11 @@
+﻿table tr{
+    height: 50px;
+}
+table tr:hover {
+    background-color: #c7ecee !important;
+    cursor: pointer;
+}
+.checkbox-input{
+    width: 30px !important;
+    height: 30px !important;
+}

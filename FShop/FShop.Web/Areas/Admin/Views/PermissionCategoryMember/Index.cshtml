@@ -1,0 +1,64 @@
+﻿@using FShop.Web.Models;
+@model List<PermissionCategoryMemberViewModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    var Permissions = ViewBag.permissions as List<PermissionViewModel>;
+    var CategoryMembers = ViewBag.categoryMembers as List<CategoryMemberViewModel>;
+    var rows = Permissions.Count;
+    var cols = CategoryMembers.Count;
+    var stt = 1;
+}
+
+@section css{
+    <link href="~/Assets/Admin/css/MyCss/PermissionCategoryMemberStyle1.css" rel="stylesheet" />
+}
+
+@section header{
+    Quản lý phân quyền
+}
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Quyền/Loại thành viên</th>
+            @foreach (var item in CategoryMembers)
+            {
+                <th scope="col">@item.Name</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @for (var i = 0; i < rows; i++)
+        {
+            <tr>
+                <th>@(stt++) - @Permissions[i].Name</th>
+                @for (var j = 0; j < cols; j++)
+                {
+                    if (Model.Any(p => p.PermissionID == Permissions[i].ID && p.CategoryMemberID == CategoryMembers[j].ID))
+                    {
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input checkbox-input" type="checkbox" checked data-permissionID="@Permissions[i].ID" data-categoryMemberID="@CategoryMembers[j].ID">
+                            </div>
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input checkbox-input" type="checkbox" data-permissionID="@Permissions[i].ID" data-categoryMemberID="@CategoryMembers[j].ID">
+                            </div>
+                        </td>
+                    }
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@section script{
+    <script src="~/Assets/Admin/js/MyScript/PermissionCategoryMemberScript.js"></script>
+}
+
