@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = null;
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error 401</title>
+</head>
+<body>
+    <div> 
+        @section header{
+            Lỗi phân quyền
+        }
+        <p class="alert-danger">Bạn không có quyền vào trang này, trở về @Html.ActionLink("đăng nhập", "Index", "Login")</p>
+    </div>
+</body>
+</html>

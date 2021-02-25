@@ -187,11 +187,13 @@
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\SupplierController.cs" />
     <Compile Include="AutoMapperConfig\AutoMapperProfile.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Core\ControllerBase.cs" />
+    <Compile Include="Infrastructure\Extensions\CustomAuthorizeAttribute.cs" />
     <Compile Include="Models\AdvertisementViewModel.cs" />
     <Compile Include="Models\BrandViewModel.cs" />
     <Compile Include="Models\CategoryMemberViewModel.cs" />
@@ -312,6 +314,8 @@
     <Content Include="Assets\Admin\js\nivo-lightbox.min.js" />
     <Content Include="Assets\Admin\js\scripts.js" />
     <Content Include="Assets\Admin\js\skycons.js" />
+    <Content Include="Assets\Common\Error404.jpg" />
+    <Content Include="Assets\Common\Error500.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -365,6 +369,8 @@
     <Content Include="Areas\Admin\Views\CategoryMember\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Permission\Index.cshtml" />
     <Content Include="Areas\Admin\Views\PermissionCategoryMember\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -391,14 +397,15 @@
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Shared\AdminPartial\_MenuLeft.cshtml" />
     <Content Include="Views\Shared\AdminPartial\_Header.cshtml" />
+    <Content Include="Views\Shared\Error401.cshtml" />
+    <Content Include="Views\Error\Error404.cshtml" />
+    <Content Include="Views\Error\Error500.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Assets\Admin\images\MyImages\Product\" />
     <Folder Include="Assets\Client\" />
-    <Folder Include="Infrastructure\Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

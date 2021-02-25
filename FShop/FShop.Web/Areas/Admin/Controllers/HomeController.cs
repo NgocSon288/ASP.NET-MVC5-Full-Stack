@@ -1,5 +1,6 @@
 ﻿using FShop.Common;
 using FShop.Common.ModelSession;
+using FShop.Web.Infrastructure.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;

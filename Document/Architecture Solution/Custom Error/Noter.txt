@@ -1,0 +1,5 @@
+* B1: Tạo Controller Error, và các trang Error 404, 500...
+
+* B2: Tạo các View tương ứng
+
+* B3: Cấu hình Web.config Redirect tới Action khi bị lỗi

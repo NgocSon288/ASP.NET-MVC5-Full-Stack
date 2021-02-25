@@ -1,4 +1,5 @@
 ﻿using FShop.Service.Services;
+using FShop.Web.Infrastructure.Extensions;
 using FShop.Web.Models;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 
 namespace FShop.Web.Areas.Admin.Controllers
 {
+    [CustomAuthorizeAttribute("ImportBillDetail")]
     public class ImportBillDetailController : BaseAdminController
     {
         private readonly IImportBillDetailService _importBillDetailService;

@@ -1,6 +1,7 @@
 ﻿using FShop.Common;
 using FShop.Model.Models;
 using FShop.Service.Services;
+using FShop.Web.Infrastructure.Extensions;
 using FShop.Web.Models;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Web.Mvc;
 
 namespace FShop.Web.Areas.Admin.Controllers
 {
+    [CustomAuthorizeAttribute("Product")]
     public class ProductController : BaseAdminController
     {
         private readonly IProductService _productService;

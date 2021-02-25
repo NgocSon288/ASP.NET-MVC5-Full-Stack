@@ -7,6 +7,8 @@ namespace FShop.Service.Services
 {
     public interface IPermissionCategoryMemberService
     {
+        IEnumerable<PermissionCategoryMember> GetPermissionCategoryMembers(int categoryMemberID);
+
         bool InsertOrDelete(PermissionCategoryMember permission);
 
         PermissionCategoryMember Insert(PermissionCategoryMember entity);
@@ -60,6 +62,11 @@ namespace FShop.Service.Services
         public PermissionCategoryMember GetByID(int id)
         {
             return _PermissionCategoryMemberRepository.GetSingleById(id);
+        }
+
+        public IEnumerable<PermissionCategoryMember> GetPermissionCategoryMembers(int categoryMemberID)
+        {
+            return _PermissionCategoryMemberRepository.GetMulti(p => p.CategoryMemberID == categoryMemberID);
         }
 
         public PermissionCategoryMember Insert(PermissionCategoryMember entity)

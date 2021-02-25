@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace FShop.Service.Services
 {
     public interface IPermissionService
-    {
+    {  
         Permission Insert(Permission entity);
 
         void Update(Permission entity);
@@ -54,7 +54,7 @@ namespace FShop.Service.Services
         {
             return _PermissionRepository.GetMultiPaging(ms => true, out totalRow, page, pageSize);
         }
-
+         
         public Permission GetByID(int id)
         {
             return _PermissionRepository.GetSingleById(id);

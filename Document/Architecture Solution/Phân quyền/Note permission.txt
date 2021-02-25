@@ -5,7 +5,7 @@
 - Gán quyền cho các action, controller
 
 ************************************************
-
+https://www.youtube.com/watch?v=Wdj3FSIvneQ&t=1682s
 *** Table
 	CategoryMember
 

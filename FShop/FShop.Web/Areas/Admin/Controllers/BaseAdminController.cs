@@ -4,7 +4,7 @@ using FShop.Model.Models;
 using System.Web.Mvc;
 
 namespace FShop.Web.Areas.Admin.Controllers
-{
+{ 
     public class BaseAdminController : Controller
     {
         protected override void OnActionExecuting(ActionExecutingContext filterContext)

@@ -1,5 +1,6 @@
 ﻿using FShop.Model.Models;
 using FShop.Service.Services;
+using FShop.Web.Infrastructure.Extensions;
 using FShop.Web.Models;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Web.Mvc;
 
 namespace FShop.Web.Areas.Admin.Controllers
 {
+    [CustomAuthorizeAttribute("Member")]
     public class MemberController : BaseAdminController
     {
         private readonly IMemberService _memberService;

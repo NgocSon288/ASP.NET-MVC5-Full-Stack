@@ -9,6 +9,7 @@ namespace FShop.Common
     public static class Constants
     {
         public static readonly string MEMBER_SESSION = "MEMBER_SESSION";
+        public static readonly string PERMISSION_SESSION = "PERMISSION_SESSION";
         public static readonly char END_CHAR = '|';
         public static readonly char BETWEEN_CHAR = '~';
         public static readonly char IMAGE_CHAR = '|';
