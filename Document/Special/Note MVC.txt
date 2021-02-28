@@ -1,0 +1,3 @@
+* Chuyển từ TextHTML sang HTML
+
+@Html.Raw("<div>Hello</div>")

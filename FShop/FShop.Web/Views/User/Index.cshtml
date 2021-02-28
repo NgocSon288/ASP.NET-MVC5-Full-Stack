@@ -1,0 +1,60 @@
+﻿@model FShop.Web.Models.LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang login</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="~/Assets/Client/css/MyCss/LoginStyle.css" rel="stylesheet" />
+    <script src="~/Assets/Client/js/MyJS/LoginScript1.js"></script>
+</head>
+<body>
+    <!-- main -->
+    <div>
+        <div class="content">
+            <div class="block text">
+                <!-- login form -->
+                <div class="login-form">
+                    <h1 class="text-center">Đăng nhập</h1>
+                    <div>
+                        @using (Html.BeginForm("Index", "User", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(false, "", new { @class = "alert-danger", @autofocus = "autofocus" }, "")
+
+                            <p style="font-size: 18px;">Tài khoản</p>
+                            @Html.TextBoxFor(Model => Model.UserName, new { @class = "name color-transparent text-white" })
+                            @Html.ValidationMessageFor(Model => Model.UserName)
+                            <p style="font-size: 18px;" class="mt-5">Mật khẩu</p>
+                            @Html.PasswordFor(Model => Model.PassWord, new { @class = "password color-transparent" })
+                            @Html.ValidationMessageFor(Model => Model.PassWord)
+                            <label class="anim">
+                                <input type="checkbox" style="width: 18px;height: 18px;">
+                                <span style="font-size: 18px;"> Nhớ tài khoản?</span>
+                            </label>
+                            <br>
+                            <input type="submit" class="btn-login w-100" value="Đăng nhập">
+                        }
+                    </div>
+                    <div class="foot-login row mt-4 w-100">
+                        <h6 class="col-6">
+                            <a href="javascript:void(0)" style="font-size: 18px;">Quên mật khẩu?</a>
+                        </h6>
+                        <h6 class="col-6 text-right">
+                            <a href="javascript:void(0)" style="font-size: 18px;">Đăng ký</a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //main -->
+</body>
+</html>
+

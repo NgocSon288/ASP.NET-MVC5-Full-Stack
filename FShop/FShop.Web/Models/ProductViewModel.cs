@@ -93,6 +93,6 @@ namespace FShop.Web.Models
         [ForeignKey("CategoryID")]
         public ProductCategoryViewModel ProductCategory { get; set; }
 
-        public virtual IEnumerable<CommentViewModel> Comments { get; set; }
+        public virtual List<CommentViewModel> Comments { get; set; }
     }
 }

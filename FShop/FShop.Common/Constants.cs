@@ -14,6 +14,6 @@ namespace FShop.Common
         public static readonly char BETWEEN_CHAR = '~';
         public static readonly char IMAGE_CHAR = '|';
 
-        
+        public static readonly int SLIDE_COUNT = 5;
     }
 }

@@ -2,11 +2,14 @@
 using FShop.Data.Repositories;
 using FShop.Model.Models;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FShop.Service.Services
 {
     public interface IAdvertisementService
     {
+        List<Advertisement> GetByCount(int count);
+
         Advertisement GetByDisplayOrder(int displayOrder);
 
         Advertisement Insert(Advertisement entity);
@@ -55,6 +58,19 @@ namespace FShop.Service.Services
         public IEnumerable<Advertisement> GetAllPaging(int page, int pageSize, out int totalRow)
         {
             return _advertisementRepository.GetMultiPaging(ad => ad.Status.Value, out totalRow, page, pageSize);
+        }
+
+        public List<Advertisement> GetByCount(int count)
+        {
+            var data = _advertisementRepository.GetMulti(ad => ad.Status == true).ToList();
+            data = data.OrderBy(ad=>ad.DisplayOrder).ToList();
+
+            if(data.Count < count)
+            {
+                return data;
+            }
+
+            return data.Take(count).ToList();
         }
 
         public Advertisement GetByDisplayOrder(int displayOrder)

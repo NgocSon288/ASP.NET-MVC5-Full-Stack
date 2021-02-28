@@ -1,18 +1,131 @@
 ﻿
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ClientLayout.cshtml";
+    var slides = ViewBag.slides as List<FShop.Web.Models.AdvertisementViewModel>;
+    var cellPhones = ViewBag.cellPhones as List<FShop.Web.Models.ProductViewModel>;
+    var smartWatchs = ViewBag.smartWatchs as List<FShop.Web.Models.ProductViewModel>;
+    var laptops = ViewBag.laptops as List<FShop.Web.Models.ProductViewModel>;
+    var tablets = ViewBag.tablets as List<FShop.Web.Models.ProductViewModel>;
 }
 
-<!DOCTYPE html>
+@section slide{
+    <div>
+        @Html.Partial("~/Views/Shared/ClientPartial/_SlideHomePartial.cshtml", slides) 
+    </div> 
+}
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div> 
-        this is home
+<!-- Điện thoại -->
+<div class="sp-dien-thoai">
+    <div class="container">
+        <p class="title-dien-thoai">
+            SẢN PHẨM NỔI BẬT ĐIỆN THOẠI
+        </p>
+         
+        @Html.Partial("~/Views/Home/_ProductCellPhoneStylePartial.cshtml", cellPhones)
+
+        <div class="clearfix"></div>
+
     </div>
-</body>
-</html>
+</div>
+<!-- //Điện thoại -->
+
+<!-- Tablet -->
+<div class="w-75 mx-auto">
+    <p class="title-dien-thoai" style="margin-top: 50px;">
+        SẢN PHẨM NỔI BẬT TABLET
+    </p>
+     
+    @Html.Partial("~/Views/Home/_ProductTabletStylePartial.cshtml", tablets)
+
+    <div class="clearfix"></div>
+</div>
+<!-- // Tablet -->
+
+<!-- Laptop  để sau-->
+<div style="padding: 1px 0!important; background-color :#F5F5F5;margin-top: 70px;padding-bottom: 50px !important;">
+    <p class="title-dien-thoai" style="margin-top: 50px;">
+        SẢN PHẨM NỔI BẬT LAPTOP
+    </p>
+     
+    @Html.Partial("~/Views/Home/_ProductLaptopStylePartial.cshtml", laptops)
+
+    <div class="clearfix"></div>
+</div>
+<!-- // Laptop -->
+
+<!-- Sản phẩm mới -->
+<div class="new-sp">
+    <div class="new-sp-text">
+        <p class="ten">vivo <span>V20</span></p>
+        <p class="cap1">Selfie Lấy Nét Tự Động Theo Mắt 44MP</p>
+        <p class="cap2">Kính Mờ Siêu Mỏng | Chụp Đêm 64MP</p>
+        <div class="d-flex justify-content-center align-items-center">
+            <button>
+                ĐẶT TRƯỚC <br>
+                <span>Cọc 500.000<sup>đ</sup> </span>
+            </button>
+            <button>
+                TRẢ GÓP <br>
+                <span>Cọc 500.000<sup>đ</sup> </span>
+            </button>
+        </div>
+    </div>
+</div>
+<!-- // Sản phẩm mới -->
+
+<!-- Smart watch -->
+<div class="sp-smart-watch sp-dien-thoai">
+    <div class="container">
+        <p class="title-dien-thoai">
+            SẢN PHẨM NỔI BẬT SMART WATCH
+        </p>
+
+        @Html.Partial("~/Views/Home/_ProductSmartWatchStylePartial.cshtml", smartWatchs)
+
+        <div class="clearfix"></div>
+
+    </div>
+</div>
+<!-- // Smart watch -->
+<!--Đăng ký-->
+<div class="bg-dang-ky">
+
+    <h3>ĐĂNG KÝ ĐỂ NHẬN THÔNG BÁO MỚI NHẤT</h3>
+    <p>Đăng ký với chúng tôi để có quyền truy cập cấp cao nhất vào các phong cách và xu hướng mới của chúng tôi</p>
+    <div>
+        <a class="btn-dang-ky px-4 py-2" href="javascript:void(0)" style="font-size: 1.5vw; text-decoration: none;">ĐĂNG KÝ</a>
+
+        <div class="show-dang-ky">
+            <div class="content-dang-ky">
+                <h2>ĐĂNG KÝ</h2>
+                <input type="text" placeholder="Vui lòng nhập email">
+                <button onclick="DangKyFunction()" class="dang-ky-thanh-cong">ĐĂNG KÝ</button>
+                <button class="close-dang-ky">X</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        $(document).ready(() => {
+            $(".btn-dang-ky").click(() => {
+                $(".show-dang-ky").fadeIn(200);
+            })
+
+            $(".close-dang-ky").click(() => {
+                $(".show-dang-ky").fadeOut(200);
+            })
+
+        })
+
+        function DangKyFunction() {
+            $(".show-dang-ky").fadeOut(200, function () {
+                alert("Bạn đã đăng ký nhận thông báo thành công!");
+            });
+        }
+    </script>
+
+
+</div>
+<!--// Đăng ký-->

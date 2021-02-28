@@ -1,0 +1,76 @@
+﻿@model List<FShop.Web.Models.AdvertisementViewModel>
+@{
+    var count = Model.Count;
+}
+
+<!-- Background trang chủ -->
+<div class="slide-show">
+
+
+    <div class="slides">
+
+        @for (int i = 1; i <= count; i++)
+        {
+            <input type="radio" name="slide" id="@Url.Content("r" + i)">
+        }
+
+        @for (int i = 0; i < count; i++)
+        {
+            if (i == 0)
+            {
+                <div class="s1"><img src="~/Assets/Admin/images/MyImages/Advertisement/@Model[i].Image" alt=""></div>
+            }
+            else
+            {
+                <div><img src="~/Assets/Admin/images/MyImages/Advertisement/@Model[i].Image" alt=""></div>
+            }
+        }
+
+    </div>
+
+    <div class="redirection-for">
+
+        @for (int i = 1; i <= count; i++)
+        {
+            <label for="@Url.Content("r" + i)"><i class="fa fa-heart" aria-hidden="true"></i></label>
+        }
+
+    </div>
+
+    <span class="left"><i class="fa fa-angle-double-left" aria-hidden="true"></i></span>
+    <span class="right"><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+
+    <script>
+        var i = 1;
+        var slide = $(".slide-show .slides .s1");
+        $(document).ready(() => {
+            $(".left").click(() => {
+                for (var j = 0; j < sl; j++) {
+                    $("#r" + j).checked = false;
+                }
+                var redirect = $('.redirection-for label');
+                var sl = parseInt(redirect.length); // tim so luong hinh anh
+                if (--i == 0) {
+                    i = sl;  // show anh cuoi
+                }
+
+                // $("#r" + i).attr("checked","true");
+                document.getElementById("r" + i).checked = true;
+            })
+            $(".right").click(() => {
+                for (var j = 0; j < sl; j++) {
+                    document.getElementById("r" + j).checked = false;
+                }
+
+                var redirect = $('.redirection-for label');
+                var sl = parseInt(redirect.length); // tim so luong hinh anh
+                if (++i == sl + 1) {
+                    i = 1; // show anh so 1
+                }
+                // $("#r" + i).attr("checked","true");
+                document.getElementById("r" + i).checked = true;
+            })
+        })
+    </script>
+
+</div>

@@ -1,0 +1,41 @@
+﻿@model  List<FShop.Web.Models.ProductViewModel>
+@{
+    var count = Model.Count;
+}
+<div class="row show-san-pham">
+
+    @for (int i = 0; i < count; i++)
+    {
+        var clas = "";
+        switch (i + 1)
+        {
+            case 1:
+                clas = "col-md-5 slideanim my-left-1";
+                break;
+            case 2:
+                clas = "col-md-5 offset-md-2 slideanim my-left-2";
+                break;
+            case 3:
+                clas = "col-md-5 slideanim2 my-left-1 mt-4";
+                break;
+            case 4:
+                clas = "col-md-5 offset-md-2 slideanim1 my-left-2 mt-4";
+                break;
+        }
+        <div class="@clas">
+            <div class="grid">
+                <figure class="effect">
+                    <img src="~/Assets/Admin/images/MyImages/Product/@Model.ElementAt(i).Image" alt="@Model.ElementAt(i).Name" width="420" height="320">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+            <h4>
+                @Html.RouteLink(@Model.ElementAt(i).Name, "ProductDetail", new { @id = @Model.ElementAt(i).ID, @alias = @Model.ElementAt(i).Alias }, new { @class = "ten" })
+            </h4>
+            <h5>@Model.ElementAt(i).Price.ToString("#,##")<span class="badge vnd">₫</span></h5>
+            <h6>
+                @Html.RouteLink("Xem thêm", "ProductDetail", new { @id = @Model.ElementAt(i).ID, @alias = @Model.ElementAt(i).Alias }, new { @class = "xem-them" })
+            </h6>
+        </div>
+    }
+</div>

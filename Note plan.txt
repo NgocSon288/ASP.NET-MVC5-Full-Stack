@@ -11,5 +11,23 @@ ORDER thêm thuộc tính số tiền lúc mua
 
  
 *****************************************************
++ thực hiện chức năng đăng nhập
+
+	+ truyền vào index get => url trước đó => gán url đó vào viewbag
+	
+	+ bên view đưa vào thẻ hidden có name là historyURL
+
+	+ index post nhận 2 tham số (MemberViewModel model, string historyURL)
 
 
+** tạo comment
+	+ chọn 1 hình ảnh
+** nếu chưa đăng nhập thì đăng nhập
+
+++ cho phép trả lời comment
+
+
+
+
+
++ mua hàng -> tạo trang cart

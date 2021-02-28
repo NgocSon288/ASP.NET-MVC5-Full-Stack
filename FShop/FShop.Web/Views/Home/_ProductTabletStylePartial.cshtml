@@ -1,0 +1,29 @@
+﻿@model  List<FShop.Web.Models.ProductViewModel> 
+<div class="row div-parent-sp">
+    <div class="col-md-6 slideanim3" style="padding: 0px 5px;">
+        <div style="padding: 5px 0px;" class="tablet-card">
+            <img src="~/Assets/Admin/images/MyImages/Product/@Model.ElementAt(0).Image" alt="@Model.ElementAt(0).Name" class="w-100">
+            <div class="my-content-denim">
+                <p class="ten">@Model.ElementAt(0).Name</p>
+                <p class="noi-dung"></p>
+                <h5>@Model.ElementAt(0).Price.ToString("#,##")<span class="badge vnd">₫</span></h5>
+                <a href="@Url.RouteUrl("ProductDetail", new { @id = @Model.ElementAt(0).ID, @alias = @Model.ElementAt(0).Alias})" class="xem-them">
+                    <span>Xem thêm</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 slideanim4" style="padding: 0px 5px;">
+        <div style="padding: 5px 0px;" class="tablet-card">
+            <img src="~/Assets/Admin/images/MyImages/Product/@Model.ElementAt(1).Image" alt="@Model.ElementAt(1).Name" class="w-100">
+            <div class="my-content-denim">
+                <p class="ten">@Model.ElementAt(1).Name</p>
+                <p class="noi-dung"></p>
+                <h5>@Model.ElementAt(1).Price.ToString("#,##")<span class="badge vnd">₫</span></h5>
+                <a href="@Url.RouteUrl("ProductDetail", new { @id = @Model.ElementAt(1).ID, @alias = @Model.ElementAt(1).Alias})" class="xem-them">
+                    <span>Xem thêm</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

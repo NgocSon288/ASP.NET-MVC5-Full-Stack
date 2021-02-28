@@ -7,6 +7,8 @@ namespace FShop.Service.Services
 {
     public interface ICommentService
     {
+        IEnumerable<Comment> GetByProductID(int productID);
+
         Comment Insert(Comment entity);
 
         void Update(Comment entity);
@@ -58,6 +60,11 @@ namespace FShop.Service.Services
         public Comment GetByID(int id)
         {
             return _CommentRepository.GetSingleById(id);
+        }
+
+        public IEnumerable<Comment> GetByProductID(int productID)
+        {
+            return _CommentRepository.GetMulti(c => c.ProductID == productID && c.Status == true);
         }
 
         public Comment Insert(Comment entity)

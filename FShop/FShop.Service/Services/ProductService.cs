@@ -8,6 +8,8 @@ namespace FShop.Service.Services
 {
     public interface IProductService
     {
+        IEnumerable<Product> GetByCategoryID(int categoryID, int count);
+
         IEnumerable<Product> GetProductPage(string key, int page, int pageSize, out int pageMax, int installment, int brandID, int supplierID, int categoryID);
 
         bool IsAliasOk(string alias, int id = 0);
@@ -149,6 +151,18 @@ namespace FShop.Service.Services
             {
                 return products;
             }
+        }
+
+        public IEnumerable<Product> GetByCategoryID(int categoryID, int count)
+        {
+            var data = _ProductRepository.GetMulti(p => p.CategoryID == categoryID && p.Status == true).ToList();
+
+            if(data.Count < count)
+            {
+                return data;
+            }
+
+            return data.Take(count);
         }
     }
 }

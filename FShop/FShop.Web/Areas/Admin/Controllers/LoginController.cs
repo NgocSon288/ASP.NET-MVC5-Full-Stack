@@ -53,7 +53,7 @@ namespace FShop.Web.Areas.Admin.Controllers
                     Session.Add(Constants.MEMBER_SESSION, AutoMapper.Mapper.Map<MemberSession>(member));
                     Session.Add(Constants.PERMISSION_SESSION, GetPermissions(member.CategoryMember.ID));
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Home"); 
                 }
             }
 

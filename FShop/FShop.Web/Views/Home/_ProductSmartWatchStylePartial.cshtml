@@ -1,0 +1,32 @@
+﻿@model  List<FShop.Web.Models.ProductViewModel>
+<div class="sp-smart-watch-grids row show-san-pham">
+    <div class="col-md-5 sp-smart-watch-grid sp-smart-watch-grid1 slideanim my-left-1">
+        <div class="grid">
+            <figure class="effect">
+                <img src="~/Assets/Admin/images/MyImages/Product/@Model.ElementAt(0).Image" alt="@Model.ElementAt(0).Name" width="420" height="320">
+                <figcaption></figcaption>
+            </figure>
+        </div>
+        <h4>
+            @Html.RouteLink(@Model.ElementAt(0).Name, "ProductDetail", new { @id = @Model.ElementAt(0).ID, @alias = @Model.ElementAt(0).Alias }, new { @class = "ten" })
+        </h4>
+        <h5>@Model.ElementAt(0).Price.ToString("#,##")<span class="badge vnd">₫</span></h5>
+        <h6><a href="@Url.RouteUrl("ProductDetail", new { @id = @Model.ElementAt(0).ID, @alias = @Model.ElementAt(0).Alias})" class="xem-them">Xem thêm</a></h6>
+    </div>
+    <div class="col-md-5 offset-md-2 sp-smart-watch-grid sp-smart-watch-grid2 slideanim my-left-2">
+        <div class="grid">
+            <figure class="effect">
+                <img src="~/Assets/Admin/images/MyImages/Product/@Model.ElementAt(1).Image" alt="@Model.ElementAt(1).Name" width="420" height="320">
+                <figcaption></figcaption>
+            </figure>
+        </div>
+        <h4>
+            @Html.RouteLink(@Model.ElementAt(1).Name, "ProductDetail", new { @id = @Model.ElementAt(1).ID, @alias = @Model.ElementAt(1).Alias }, new { @class = "ten" })
+        </h4>
+        <h5>@Model.ElementAt(1).Price.ToString("#,##")<span class="badge vnd">₫</span></h5>
+        <h6> 
+            <a href="@Url.RouteUrl("ProductDetail", new { @id = @Model.ElementAt(1).ID, @alias = @Model.ElementAt(1).Alias})" class="xem-them">content</a> 
+        </h6>
+
+    </div>
+</div>
